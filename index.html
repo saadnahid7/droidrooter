@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Droid Rooter - Complete Android Solutions | Apps, Troubleshooting & Modifications</title>
+    <title>Droid Rooter - #1 Android Expert | FRP Bypass, Rooting & App Solutions 2025</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Complete Android solutions: rooting, app troubleshooting, performance fixes, FRP bypass, firmware installation, and all Android issues resolved remotely worldwide.">
+    <meta name="description" content="Professional Android expert solving ALL device issues remotely. FRP bypass, rooting, app troubleshooting, performance optimization & complete Android solutions worldwide. 3+ years experience, 95% success rate.">
     <meta name="keywords" content="android help, android troubleshooting, android apps, android rooting, frp bypass, android repair, android performance, android issues, android support">
     <meta name="author" content="Droid Rooter">
     <meta name="robots" content="index, follow">
@@ -26,14 +26,14 @@
     <meta name="twitter:title" content="Droid Rooter - Complete Android Solutions">
     <meta name="twitter:description" content="Expert Android help and troubleshooting services worldwide.">
     
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-modern.css">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -61,392 +61,542 @@
     }
     </script>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">Droid Rooter</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="services.html">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
+<body class="font-inter bg-gray-50 text-gray-900">
+    <!-- Navigation Header -->
+    <header class="fixed top-0 w-full z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800" role="banner">
+        <nav class="container mx-auto px-4 py-4" role="navigation" aria-label="Main navigation">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-2xl font-bold text-white hover:text-blue-400 transition-colors" aria-label="Droid Rooter Home">
+                    <span class="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">Droid Rooter</span>
+                </a>
+                
+                <!-- Mobile menu button -->
+                <button class="md:hidden text-white hover:text-blue-400 transition-colors" id="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <div class="w-6 h-6 flex flex-col justify-center items-center">
+                        <span class="block w-5 h-0.5 bg-current mb-1 transition-all"></span>
+                        <span class="block w-5 h-0.5 bg-current mb-1 transition-all"></span>
+                        <span class="block w-5 h-0.5 bg-current transition-all"></span>
+                    </div>
+                </button>
+                
+                <!-- Desktop Navigation -->
+                <ul class="hidden md:flex space-x-8" role="menubar">
+                    <li role="none"><a href="index.html" class="nav-link text-blue-400 font-medium" role="menuitem" aria-current="page">Home</a></li>
+                    <li role="none"><a href="services.html" class="nav-link" role="menuitem">Services</a></li>
+                    <li role="none"><a href="blog/" class="nav-link" role="menuitem">Blog</a></li>
+                    <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
+                    <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
                 </ul>
             </div>
-        </div>
-    </nav>
+            
+            <!-- Mobile Navigation -->
+            <div class="md:hidden mt-4 hidden" id="mobile-menu" role="menu">
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="block py-2 text-blue-400 font-medium" role="menuitem">Home</a></li>
+                    <li><a href="services.html" class="block py-2 text-white hover:text-blue-400 transition-colors" role="menuitem">Services</a></li>
+                    <li><a href="blog/" class="block py-2 text-white hover:text-blue-400 transition-colors" role="menuitem">Blog</a></li>
+                    <li><a href="contact.html" class="block py-2 text-white hover:text-blue-400 transition-colors" role="menuitem">Contact</a></li>
+                    <li><a href="about.html" class="block py-2 text-white hover:text-blue-400 transition-colors" role="menuitem">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <div class="row align-items-center min-vh-100 pt-5">
-                <div class="col-lg-6">
-                    <div class="hero-badge mb-3">
-                        <span class="badge bg-success">Complete Android Solutions</span>
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden" aria-labelledby="hero-title">
+            <!-- CSS-based background design -->
+            <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-green-900"></div>
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute top-20 left-20 w-32 h-32 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
+                <div class="absolute bottom-20 right-20 w-40 h-40 bg-green-500 rounded-full blur-3xl animate-pulse delay-1000"></div>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-purple-500 rounded-full blur-3xl animate-pulse delay-500"></div>
+            </div>
+            
+            <!-- Grid pattern overlay -->
+            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0); background-size: 20px 20px;"></div>
+            
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="text-center lg:text-left">
+                        <!-- Hero Badge -->
+                        <div class="inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full text-green-300 text-sm font-medium mb-6">
+                            <span class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+                            Complete Android Solutions
+                        </div>
+                        
+                        <!-- Hero Title -->
+                        <h1 id="hero-title" class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                            Your Android Expert for 
+                            <span class="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">Everything</span>
+                        </h1>
+                        
+                        <!-- Hero Subtitle -->
+                        <p class="text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl">
+                            From simple app issues to advanced rooting - we solve ALL your Android problems remotely. Professional help for performance fixes, troubleshooting, FRP bypass, and complete device optimization.
+                        </p>
+                        
+                        <!-- Hero Buttons -->
+                        <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                            <a href="contact.html" class="btn-primary inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                                <span class="mr-2">🚀</span>
+                                Get Help Now
+                            </a>
+                            <a href="services.html" class="btn-secondary inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+                                <span class="mr-2">📋</span>
+                                View All Solutions
+                            </a>
+                        </div>
+                        
+                        <!-- Hero Features -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+                            <div class="flex items-center text-green-300">
+                                <span class="text-green-400 mr-2">✓</span>
+                                Any Android Issue
+                            </div>
+                            <div class="flex items-center text-green-300">
+                                <span class="text-green-400 mr-2">✓</span>
+                                Remote Support
+                            </div>
+                            <div class="flex items-center text-green-300">
+                                <span class="text-green-400 mr-2">✓</span>
+                                Expert Solutions
+                            </div>
+                        </div>
                     </div>
-                    <h1 class="hero-title mb-4">Your Android Expert for Everything - Apps, Troubleshooting & Modifications</h1>
-                    <p class="hero-subtitle mb-4">From simple app issues to advanced rooting - we solve ALL your Android problems remotely. Professional help for performance fixes, troubleshooting, FRP bypass, and complete device optimization.</p>
                     
-                    <div class="hero-buttons mb-4">
-                        <a href="contact.html" class="btn btn-primary btn-lg me-3">Get Help Now</a>
-                        <a href="services.html" class="btn btn-outline-light btn-lg">View All Solutions</a>
+                    <!-- CSS-based Hero Visual -->
+                    <div class="relative">
+                        <div class="relative w-full max-w-md mx-auto">
+                            <!-- Phone mockup using CSS -->
+                            <div class="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-2 shadow-2xl">
+                                <div class="bg-gradient-to-br from-blue-600 to-green-600 rounded-2xl p-8 text-white">
+                                    <div class="text-center">
+                                        <div class="text-6xl mb-4">📱</div>
+                                        <h3 class="text-xl font-bold mb-2">Android Solutions</h3>
+                                        <p class="text-sm opacity-90">Professional • Remote • Reliable</p>
+                                        
+                                        <!-- Feature icons -->
+                                        <div class="grid grid-cols-2 gap-4 mt-6">
+                                            <div class="bg-white/20 rounded-lg p-3 text-center">
+                                                <div class="text-2xl mb-1">🔓</div>
+                                                <div class="text-xs">FRP Bypass</div>
+                                            </div>
+                                            <div class="bg-white/20 rounded-lg p-3 text-center">
+                                                <div class="text-2xl mb-1">⚡</div>
+                                                <div class="text-xs">Performance</div>
+                                            </div>
+                                            <div class="bg-white/20 rounded-lg p-3 text-center">
+                                                <div class="text-2xl mb-1">🛠️</div>
+                                                <div class="text-xs">Rooting</div>
+                                            </div>
+                                            <div class="bg-white/20 rounded-lg p-3 text-center">
+                                                <div class="text-2xl mb-1">📊</div>
+                                                <div class="text-xs">Recovery</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Floating elements -->
+                            <div class="absolute -top-4 -right-4 w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white text-2xl animate-bounce">
+                                ✨
+                            </div>
+                            <div class="absolute -bottom-4 -left-4 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white text-xl animate-pulse">
+                                🎯
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Overview Section -->
+        <section class="py-20 bg-white" aria-labelledby="services-title">
+            <div class="container mx-auto px-4">
+                <header class="text-center mb-16">
+                    <h2 id="services-title" class="text-4xl font-bold text-gray-900 mb-4">
+                        Complete Android Solutions - We Fix Everything!
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        From basic app problems to advanced modifications - your one-stop solution for all Android issues. Professional remote support worldwide.
+                    </p>
+                </header>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <article class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-red-200 group">
+                        <div class="service-icon w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                            🔓
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">FRP & Account Bypass</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Locked out after factory reset? We remove Google account locks, Samsung account bypass, and all security restrictions safely.
+                        </p>
+                    </article>
+                    
+                    <!-- Service Card 2 -->
+                    <article class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-yellow-200 group">
+                        <div class="service-icon w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                            📱
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">App Troubleshooting</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Apps crashing? Won't install? Performance issues? We diagnose and fix all app-related problems quickly and efficiently.
+                        </p>
+                    </article>
+                    
+                    <!-- Service Card 3 -->
+                    <article class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-green-200 group">
+                        <div class="service-icon w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                            ⚡
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Performance Optimization</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Slow device? Battery drain? We optimize your Android for peak performance, speed up sluggish phones, and extend battery life.
+                        </p>
+                    </article>
+                    
+                    <!-- Service Card 4 -->
+                    <article class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200 group">
+                        <div class="service-icon w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                            🔒
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Android Rooting & Mods</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Unlock your device's full potential with safe rooting, custom ROMs, bootloader unlocking, and advanced system modifications.
+                        </p>
+                    </article>
+                    
+                    <!-- Service Card 5 -->
+                    <article class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-cyan-200 group">
+                        <div class="service-icon w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                            🛠️
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">System Repair & Recovery</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Boot loops? Soft brick? System crashes? We recover and repair Android devices from various software issues and errors.
+                        </p>
+                    </article>
+                    
+                    <!-- Service Card 6 -->
+                    <article class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-purple-200 group">
+                        <div class="service-icon w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                            📊
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Data Recovery & Backup</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Lost photos or contacts? We recover deleted data, create complete backups, and extract data from damaged devices.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="py-20 bg-gray-50" aria-labelledby="why-choose-title">
+            <div class="container mx-auto px-4">
+                <header class="text-center mb-16">
+                    <h2 id="why-choose-title" class="text-4xl font-bold text-gray-900 mb-4">
+                        Why Choose Droid Rooter for Your Android Issues?
+                    </h2>
+                    <p class="text-xl text-gray-600">Professional expertise meets comprehensive solutions</p>
+                </header>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center group">
+                        <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            🌍
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Complete Solutions</h3>
+                        <p class="text-gray-600">From simple app fixes to complex rooting - we handle ALL Android issues in one place</p>
                     </div>
                     
-                    <div class="hero-features">
-                        <div class="row">
-                            <div class="col-md-4 mb-2">
-                                <span class="feature-check">✓</span> Any Android Issue
-                            </div>
-                            <div class="col-md-4 mb-2">
-                                <span class="feature-check">✓</span> Remote Support
-                            </div>
-                            <div class="col-md-4 mb-2">
-                                <span class="feature-check">✓</span> Expert Solutions
-                            </div>
+                    <div class="text-center group">
+                        <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            ⚡
                         </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Remote Support</h3>
+                        <p class="text-gray-600">Get help from anywhere in the world. No need to visit repair shops - we work remotely</p>
                     </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="hero-image">
-                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a5e9ff26-4da2-40fd-97ea-3d92c00ff6a5.png" alt="Complete Android solutions including app troubleshooting, performance optimization, and device modifications" class="img-fluid rounded">
+                    
+                    <div class="text-center group">
+                        <div class="w-20 h-20 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            🎯
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Expert Diagnosis</h3>
+                        <p class="text-gray-600">Quick problem identification and efficient solutions. We know Android inside and out</p>
+                    </div>
+                    
+                    <div class="text-center group">
+                        <div class="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            🛡️
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Safe & Reliable</h3>
+                        <p class="text-gray-600">All procedures are safe with backup protocols. Your data and device security is our priority</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Services Overview Section -->
-    <section class="services-overview py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center mb-5">
-                    <h2 class="section-title">Complete Android Solutions - We Fix Everything!</h2>
-                    <p class="section-subtitle">From basic app problems to advanced modifications - your one-stop solution for all Android issues. Professional remote support worldwide.</p>
-                </div>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card h-100">
-                        <div class="service-icon mb-3">
-                            <div class="icon-circle bg-danger">🔓</div>
-                        </div>
-                        <h4>FRP & Account Bypass</h4>
-                        <p>Locked out after factory reset? We remove Google account locks, Samsung account bypass, and all security restrictions safely.</p>
-                    </div>
-                </div>
+        <!-- Common Issues Section -->
+        <section class="py-20 bg-white" aria-labelledby="issues-title">
+            <div class="container mx-auto px-4">
+                <header class="text-center mb-16">
+                    <h2 id="issues-title" class="text-4xl font-bold text-gray-900 mb-4">
+                        Common Android Issues We Solve Daily
+                    </h2>
+                    <p class="text-xl text-gray-600">No matter what Android problem you're facing, we've got the solution</p>
+                </header>
                 
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card h-100">
-                        <div class="service-icon mb-3">
-                            <div class="icon-circle bg-warning">📱</div>
-                        </div>
-                        <h4>App Troubleshooting</h4>
-                        <p>Apps crashing? Won't install? Performance issues? We diagnose and fix all app-related problems quickly and efficiently.</p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card h-100">
-                        <div class="service-icon mb-3">
-                            <div class="icon-circle bg-success">⚡</div>
-                        </div>
-                        <h4>Performance Optimization</h4>
-                        <p>Slow device? Battery drain? We optimize your Android for peak performance, speed up sluggish phones, and extend battery life.</p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card h-100">
-                        <div class="service-icon mb-3">
-                            <div class="icon-circle bg-primary">🔒</div>
-                        </div>
-                        <h4>Android Rooting & Mods</h4>
-                        <p>Unlock your device's full potential with safe rooting, custom ROMs, bootloader unlocking, and advanced system modifications.</p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card h-100">
-                        <div class="service-icon mb-3">
-                            <div class="icon-circle bg-info">🛠️</div>
-                        </div>
-                        <h4>System Repair & Recovery</h4>
-                        <p>Boot loops? Soft brick? System crashes? We recover and repair Android devices from various software issues and errors.</p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card h-100">
-                        <div class="service-icon mb-3">
-                            <div class="icon-circle bg-secondary">📊</div>
-                        </div>
-                        <h4>Data Recovery & Backup</h4>
-                        <p>Lost photos or contacts? We recover deleted data, create complete backups, and extract data from damaged devices.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section class="why-choose py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center mb-5">
-                    <h2 class="section-title">Why Choose Droid Rooter for Your Android Issues?</h2>
-                    <p class="section-subtitle">Professional expertise meets comprehensive solutions</p>
-                </div>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="feature-box">
-                        <div class="feature-icon bg-success text-white rounded-circle mx-auto mb-3" style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
-                            <span style="font-size: 2rem;">🌍</span>
-                        </div>
-                        <h5>Complete Solutions</h5>
-                        <p>From simple app fixes to complex rooting - we handle ALL Android issues in one place</p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="feature-box">
-                        <div class="feature-icon bg-info text-white rounded-circle mx-auto mb-3" style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
-                            <span style="font-size: 2rem;">⚡</span>
-                        </div>
-                        <h5>Remote Support</h5>
-                        <p>Get help from anywhere in the world. No need to visit repair shops - we work remotely</p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="feature-box">
-                        <div class="feature-icon bg-warning text-white rounded-circle mx-auto mb-3" style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
-                            <span style="font-size: 2rem;">🎯</span>
-                        </div>
-                        <h5>Expert Diagnosis</h5>
-                        <p>Quick problem identification and efficient solutions. We know Android inside and out</p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="feature-box">
-                        <div class="feature-icon bg-danger text-white rounded-circle mx-auto mb-3" style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
-                            <span style="font-size: 2rem;">🛡️</span>
-                        </div>
-                        <h5>Safe & Reliable</h5>
-                        <p>All procedures are safe with backup protocols. Your data and device security is our priority</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Common Issues Section -->
-    <section class="common-issues py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center mb-5">
-                    <h2 class="section-title">Common Android Issues We Solve Daily</h2>
-                    <p class="section-subtitle">No matter what Android problem you're facing, we've got the solution</p>
-                </div>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-lg-6">
-                    <div class="issue-card">
-                        <h5>🔒 Device Locked Issues</h5>
-                        <ul class="list-unstyled">
-                            <li>• Google account locked after reset</li>
-                            <li>• Samsung reactivation lock</li>
-                            <li>• Forgotten screen lock (PIN/Pattern)</li>
-                            <li>• Mi account bypass (Xiaomi)</li>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-gradient-to-r from-red-50 to-red-100 rounded-2xl p-8 border-l-4 border-red-500">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                            <span class="text-2xl mr-3">🔒</span>
+                            Device Locked Issues
+                        </h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start"><span class="text-red-500 mr-2">•</span>Google account locked after reset</li>
+                            <li class="flex items-start"><span class="text-red-500 mr-2">•</span>Samsung reactivation lock</li>
+                            <li class="flex items-start"><span class="text-red-500 mr-2">•</span>Forgotten screen lock (PIN/Pattern)</li>
+                            <li class="flex items-start"><span class="text-red-500 mr-2">•</span>Mi account bypass (Xiaomi)</li>
                         </ul>
                     </div>
-                </div>
-                
-                <div class="col-lg-6">
-                    <div class="issue-card">
-                        <h5>📱 Performance Problems</h5>
-                        <ul class="list-unstyled">
-                            <li>• Slow and laggy device</li>
-                            <li>• Battery draining too fast</li>
-                            <li>• Apps crashing frequently</li>
-                            <li>• Storage always full</li>
+                    
+                    <div class="bg-gradient-to-r from-yellow-50 to-yellow-100 rounded-2xl p-8 border-l-4 border-yellow-500">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                            <span class="text-2xl mr-3">📱</span>
+                            Performance Problems
+                        </h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start"><span class="text-yellow-500 mr-2">•</span>Slow and laggy device</li>
+                            <li class="flex items-start"><span class="text-yellow-500 mr-2">•</span>Battery draining too fast</li>
+                            <li class="flex items-start"><span class="text-yellow-500 mr-2">•</span>Apps crashing frequently</li>
+                            <li class="flex items-start"><span class="text-yellow-500 mr-2">•</span>Storage always full</li>
                         </ul>
                     </div>
-                </div>
-                
-                <div class="col-lg-6">
-                    <div class="issue-card">
-                        <h5>🛠️ System Issues</h5>
-                        <ul class="list-unstyled">
-                            <li>• Boot loop (stuck on logo)</li>
-                            <li>• System crashes and freezes</li>
-                            <li>• Apps won't install or update</li>
-                            <li>• Network and connectivity issues</li>
+                    
+                    <div class="bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl p-8 border-l-4 border-blue-500">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                            <span class="text-2xl mr-3">🛠️</span>
+                            System Issues
+                        </h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>Boot loop (stuck on logo)</li>
+                            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>System crashes and freezes</li>
+                            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>Apps won't install or update</li>
+                            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>Network and connectivity issues</li>
                         </ul>
                     </div>
-                </div>
-                
-                <div class="col-lg-6">
-                    <div class="issue-card">
-                        <h5>🔧 Advanced Needs</h5>
-                        <ul class="list-unstyled">
-                            <li>• Want to root device safely</li>
-                            <li>• Install custom ROM</li>
-                            <li>• Remove bloatware</li>
-                            <li>• Gaming performance optimization</li>
+                    
+                    <div class="bg-gradient-to-r from-green-50 to-green-100 rounded-2xl p-8 border-l-4 border-green-500">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                            <span class="text-2xl mr-3">🔧</span>
+                            Advanced Needs
+                        </h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start"><span class="text-green-500 mr-2">•</span>Want to root device safely</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">•</span>Install custom ROM</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">•</span>Remove bloatware</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">•</span>Gaming performance optimization</li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center mb-5">
-                    <h2 class="section-title">What Our Customers Say</h2>
-                    <p class="section-subtitle">Thousands of satisfied customers worldwide trust us with their Android issues</p>
+        <!-- Testimonials Section -->
+        <section class="py-20 bg-gray-50" aria-labelledby="testimonials-title">
+            <div class="container mx-auto px-4">
+                <header class="text-center mb-16">
+                    <h2 id="testimonials-title" class="text-4xl font-bold text-gray-900 mb-4">
+                        What Our Customers Say
+                    </h2>
+                    <p class="text-xl text-gray-600">Thousands of satisfied customers worldwide trust us with their Android issues</p>
+                </header>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <article class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="text-yellow-400 text-2xl mb-4">★★★★★</div>
+                        <blockquote class="text-gray-600 mb-6 italic leading-relaxed">
+                            "My phone was completely locked after factory reset. They bypassed the Google account in just 30 minutes! Amazing service!"
+                        </blockquote>
+                        <footer class="border-t pt-4">
+                            <cite class="font-bold text-gray-900">Sarah M.</cite><br>
+                            <span class="text-gray-500 text-sm">New York, US</span>
+                        </footer>
+                    </article>
+                    
+                    <article class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="text-yellow-400 text-2xl mb-4">★★★★★</div>
+                        <blockquote class="text-gray-600 mb-6 italic leading-relaxed">
+                            "Apps kept crashing and phone was super slow. They fixed everything remotely and now it runs like new!"
+                        </blockquote>
+                        <footer class="border-t pt-4">
+                            <cite class="font-bold text-gray-900">James K.</cite><br>
+                            <span class="text-gray-500 text-sm">London, UK</span>
+                        </footer>
+                    </article>
+                    
+                    <article class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="text-yellow-400 text-2xl mb-4">★★★★★</div>
+                        <blockquote class="text-gray-600 mb-6 italic leading-relaxed">
+                            "Professional rooting service and helped with app issues too. One-stop solution for all Android problems!"
+                        </blockquote>
+                        <footer class="border-t pt-4">
+                            <cite class="font-bold text-gray-900">Maria L.</cite><br>
+                            <span class="text-gray-500 text-sm">Berlin, Germany</span>
+                        </footer>
+                    </article>
                 </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-green-600 relative overflow-hidden" aria-labelledby="cta-title">
+            <!-- Background elements -->
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute top-10 left-10 w-20 h-20 bg-white rounded-full blur-xl animate-pulse"></div>
+                <div class="absolute bottom-10 right-10 w-32 h-32 bg-white rounded-full blur-xl animate-pulse delay-1000"></div>
+                <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-white rounded-full blur-xl animate-pulse delay-500"></div>
             </div>
             
-            <div class="row g-4">
-                <div class="col-lg-4">
-                    <div class="testimonial-card">
-                        <div class="stars mb-3">★★★★★</div>
-                        <p class="testimonial-text">"My phone was completely locked after factory reset. They bypassed the Google account in just 30 minutes! Amazing service!"</p>
-                        <div class="testimonial-author">
-                            <strong>Sarah M.</strong><br>
-                            <small class="text-muted">New York, US</small>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4">
-                    <div class="testimonial-card">
-                        <div class="stars mb-3">★★★★★</div>
-                        <p class="testimonial-text">"Apps kept crashing and phone was super slow. They fixed everything remotely and now it runs like new!"</p>
-                        <div class="testimonial-author">
-                            <strong>James K.</strong><br>
-                            <small class="text-muted">London, UK</small>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4">
-                    <div class="testimonial-card">
-                        <div class="stars mb-3">★★★★★</div>
-                        <p class="testimonial-text">"Professional rooting service and helped with app issues too. One-stop solution for all Android problems!"</p>
-                        <div class="testimonial-author">
-                            <strong>Maria L.</strong><br>
-                            <small class="text-muted">Berlin, Germany</small>
-                        </div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="text-center max-w-4xl mx-auto">
+                    <h2 id="cta-title" class="text-4xl md:text-5xl font-bold text-white mb-6">
+                        Got an Android Problem? We'll Solve It!
+                    </h2>
+                    <p class="text-xl text-blue-100 mb-8 leading-relaxed">
+                        Don't struggle with Android issues alone. Get professional help from experts who solve ANY Android problem remotely, safely, and quickly.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="https://wa.me/8801748788939" 
+                           class="inline-flex items-center justify-center px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                           target="_blank" rel="noopener noreferrer">
+                            <span class="mr-2">💬</span>
+                            WhatsApp Now
+                        </a>
+                        <a href="contact.html" 
+                           class="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                            <span class="mr-2">📞</span>
+                            Get Free Quote
+                        </a>
+                        <a href="services.html" 
+                           class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+                            <span class="mr-2">🔧</span>
+                            View All Services
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="cta-title mb-4">Got an Android Problem? We'll Solve It!</h2>
-                    <p class="cta-subtitle mb-4">Don't struggle with Android issues alone. Get professional help from experts who solve ANY Android problem remotely, safely, and quickly.</p>
-                    <div class="cta-buttons">
-                        <a href="https://wa.me/8801748788939" class="btn btn-success btn-lg me-3" target="_blank">WhatsApp Now</a>
-                        <a href="contact.html" class="btn btn-primary btn-lg me-3">Get Free Quote</a>
-                        <a href="services.html" class="btn btn-outline-light btn-lg">View All Services</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer bg-dark text-light py-5">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4">
-                    <h5 class="fw-bold mb-3">Droid Rooter</h5>
-                    <p>Complete Android solutions provider worldwide. From simple app troubleshooting to advanced rooting - we solve ALL Android issues remotely with 3+ years of professional experience.</p>
-                    <div class="contact-info">
-                        <p><strong>Contact Us Directly</strong></p>
-                        <p>WhatsApp: +8801748788939 | Telegram: @DroidRooter | Email: droidrooter7@gmail.com</p>
+    <footer class="bg-gray-900 text-white py-16" role="contentinfo">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="lg:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
+                        Droid Rooter
+                    </h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Complete Android solutions provider worldwide. From simple app troubleshooting to advanced rooting - we solve ALL Android issues remotely with 3+ years of professional experience.
+                    </p>
+                    
+                    <div class="bg-gray-800 rounded-lg p-4">
+                        <h4 class="font-bold mb-2 text-blue-400">Contact Us Directly</h4>
+                        <div class="space-y-1 text-sm text-gray-300">
+                            <p><span class="font-medium">WhatsApp:</span> +8801748788939</p>
+                            <p><span class="font-medium">Telegram:</span> @DroidRooter</p>
+                            <p><span class="font-medium">Email:</span> droidrooter7@gmail.com</p>
+                        </div>
+                        <div class="mt-3 pt-3 border-t border-gray-700">
+                            <a href="saadnahid/" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+                                👨‍💼 Contact the CEO
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="col-lg-2">
-                    <h6 class="fw-bold mb-3">Popular Solutions</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="services.html" class="text-light text-decoration-none">FRP Bypass</a></li>
-                        <li><a href="services.html" class="text-light text-decoration-none">App Troubleshooting</a></li>
-                        <li><a href="services.html" class="text-light text-decoration-none">Performance Fix</a></li>
-                        <li><a href="services.html" class="text-light text-decoration-none">Android Rooting</a></li>
+                <!-- Popular Solutions -->
+                <div>
+                    <h4 class="font-bold mb-4 text-lg">Popular Solutions</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="text-gray-300 hover:text-blue-400 transition-colors flex items-center">
+                            <span class="mr-2">🔓</span>FRP Bypass
+                        </a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-blue-400 transition-colors flex items-center">
+                            <span class="mr-2">📱</span>App Troubleshooting
+                        </a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-blue-400 transition-colors flex items-center">
+                            <span class="mr-2">⚡</span>Performance Fix
+                        </a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-blue-400 transition-colors flex items-center">
+                            <span class="mr-2">🔒</span>Android Rooting
+                        </a></li>
                     </ul>
                 </div>
                 
-                <div class="col-lg-2">
-                    <h6 class="fw-bold mb-3">Resources</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="blog.html" class="text-light text-decoration-none">Blog</a></li>
-                        <li><a href="faq.html" class="text-light text-decoration-none">FAQ</a></li>
-                        <li><a href="contact.html" class="text-light text-decoration-none">Support</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">Guides</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-2">
-                    <h6 class="fw-bold mb-3">Company</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
-                        <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
-                        <li><a href="privacy.html" class="text-light text-decoration-none">Privacy Policy</a></li>
-                        <li><a href="terms.html" class="text-light text-decoration-none">Terms of Service</a></li>
+                <!-- Resources & Company -->
+                <div>
+                    <h4 class="font-bold mb-4 text-lg">Resources & Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="blog/" class="text-gray-300 hover:text-blue-400 transition-colors flex items-center">
+                            <span class="mr-2">📝</span>Blog
+                        </a></li>
+                        <li><a href="faq.html" class="text-gray-300 hover:text-blue-400 transition-colors flex items-center">
+                            <span class="mr-2">❓</span>FAQ
+                        </a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-blue-400 transition-colors flex items-center">
+                            <span class="mr-2">ℹ️</span>About Us
+                        </a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-blue-400 transition-colors flex items-center">
+                            <span class="mr-2">📞</span>Contact
+                        </a></li>
                     </ul>
                 </div>
             </div>
             
-            <hr class="my-4">
-            
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <p class="mb-0">&copy; 2025 Droid Rooter. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <a href="privacy.html" class="text-light text-decoration-none me-3">Privacy Policy</a>
-                    <a href="terms.html" class="text-light text-decoration-none me-3">Terms of Service</a>
-                    <a href="contact.html" class="text-light text-decoration-none">Cookie Policy</a>
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2025 Droid Rooter. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 text-sm">
+                        <a href="privacy.html" class="text-gray-400 hover:text-blue-400 transition-colors">Privacy Policy</a>
+                        <a href="terms.html" class="text-gray-400 hover:text-blue-400 transition-colors">Terms of Service</a>
+                        <a href="contact.html" class="text-gray-400 hover:text-blue-400 transition-colors">Cookie Policy</a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/main-modern.js"></script>
     
-    <!-- Custom JS -->
-    <script src="js/main.js"></script>
+    <!-- Tailwind CSS Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'monospace']
+                    },
+                    animation: {
+                        'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'bounce': 'bounce 1s infinite',
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 </html>

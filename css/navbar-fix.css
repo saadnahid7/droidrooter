@@ -1,0 +1,48 @@
+
+/* BALANCED MOBILE NAVBAR FIX - OPTIMAL SPACING */
+.hero-section {
+    padding-top: 80px !important;
+    margin-top: 0 !important;
+}
+
+.hero-section .container {
+    padding-top: 1rem !important;
+}
+
+.hero-badge {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.hero-title {
+    margin-top: 1rem !important;
+}
+
+/* Responsive spacing - minimal but effective */
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: 100px !important;
+    }
+    .hero-badge {
+        margin-top: 1.5rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding-top: 120px !important;
+    }
+    .hero-badge {
+        margin-top: 2rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding-top: 130px !important;
+    }
+    .hero-badge {
+        margin-top: 2.5rem !important;
+    }
+}
+

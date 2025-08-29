@@ -1,0 +1,32 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://droidrooter.com/sitemap.xml
+
+# Allow all search engines to crawl the site
+Allow: /index.html
+Allow: /services.html
+Allow: /contact.html
+Allow: /about.html
+Allow: /faq.html
+Allow: /blog/
+Allow: /site/saadnahid/
+
+# Allow crawling of CSS and JS files for better rendering
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Disallow crawling of admin or private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.zip$
+Disallow: /WEBSITE-SETUP-GUIDE.txt
+
+# Crawl delay (optional - be respectful to server resources)
+Crawl-delay: 1
+
+# Additional sitemaps (if needed in future)
+# Sitemap: https://droidrooter.com/blog-sitemap.xml
+# Sitemap: https://droidrooter.com/services-sitemap.xml
