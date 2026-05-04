@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.droidrooter.com/sitemap.xml
+
+# AI / LLM visibility
+# LLMs.txt: https://www.droidrooter.com/llms.txt
