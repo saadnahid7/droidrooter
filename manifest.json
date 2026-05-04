@@ -1,0 +1,27 @@
+{
+  "name": "Droid Rooter — Android IT Support",
+  "short_name": "Droid Rooter",
+  "description": "Professional remote Android IT support — rooting, custom ROM installation, FRP bypass, IMEI repair, data recovery and bricked-device rescue.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0F172A",
+  "theme_color": "#0F172A",
+  "lang": "en-US",
+  "categories": ["productivity", "utilities", "business"],
+  "icons": [
+    {
+      "src": "/assets/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

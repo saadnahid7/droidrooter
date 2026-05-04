@@ -1,0 +1,24 @@
+Cloudflare Web Analytics Setup — Droid Rooter
+==============================================
+
+The site uses Cloudflare Web Analytics (privacy-friendly, no cookies, GDPR
+compliant). The beacon script is already embedded in every page via
+src/layouts/BaseLayout.astro, but the placeholder token must be replaced
+with the real token before launch.
+
+After deploying to Cloudflare Pages:
+
+1. Go to dash.cloudflare.com → Web Analytics → Add Site → droidrooter.com
+2. Copy the token from the Cloudflare dashboard
+3. Open src/layouts/BaseLayout.astro
+4. Find: data-cf-beacon='{"token": "REPLACE_WITH_CF_TOKEN"}'
+5. Replace REPLACE_WITH_CF_TOKEN with your real token
+6. Commit and redeploy
+
+Notes
+-----
+- Do NOT add Google Analytics, Google Tag Manager, Facebook Pixel, or any
+  other tracking scripts. The privacy policy promises Cloudflare-only.
+- Cloudflare Web Analytics is free with no cookies and no PII collection.
+- Verify deployment by visiting any page and checking the Network tab for
+  a request to static.cloudflareinsights.com/beacon.min.js.
