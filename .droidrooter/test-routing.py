@@ -47,6 +47,21 @@ SERVICE_CLUSTER = {
     "/services/advanced-mods",
 }
 
+RESCUE_ARTICLES = {
+    "android-bootloop-fix-without-losing-data",
+    "phone-stuck-on-boot-screen",
+    "soft-brick-vs-hard-brick",
+    "magisk-flash-failed-recovery",
+    "stuck-in-recovery-mode-android",
+    "fastboot-device-not-detected",
+    "edl-mode-explained",
+    "failed-ota-update-rooted-phone",
+    "odin-fail-errors-samsung",
+    "bootloop-after-custom-rom",
+    "android-wont-turn-on-diagnosis",
+    "recover-data-from-bricked-phone",
+}
+
 
 def route_for(path: Path) -> str:
     relative = path.relative_to(ROOT).as_posix()
@@ -160,6 +175,40 @@ def static_checks() -> None:
         assert "All Major Brands" not in text
         assert "pay only after" not in text.lower()
         assert "banking-safe" not in text.lower()
+
+    for slug in RESCUE_ARTICLES:
+        path = ROOT / "blog" / slug / "index.html"
+        text = path.read_text(encoding="utf-8")
+        route = f"/blog/{slug}"
+        assert len(re.findall(r"<h1(?:\s|>)", text)) == 1, (
+            f"{route}: expected exactly one H1"
+        )
+        schema_types = [
+            json.loads(html.unescape(block)).get("@type")
+            for block in JSON_LD.findall(text)
+        ]
+        assert schema_types == ["Article", "BreadcrumbList"], (
+            f"{route}: expected Article + BreadcrumbList, got {schema_types}"
+        )
+        related = re.search(
+            r'<section data-astro-cid-xj4yj4fu class="dr-related".*?</section>',
+            text,
+            re.DOTALL,
+        )
+        assert related, f"{route}: More Android Guides section missing or unscoped"
+        related_html = related.group(0)
+        assert ">More Android Guides</h2>" in related_html
+        links = re.findall(
+            r'<a data-astro-cid-fkyubztb href="(/blog/[^"]+)" class="dr-bcard"',
+            related_html,
+        )
+        assert len(links) == 3, (
+            f"{route}: expected three scoped related cards, got {len(links)}"
+        )
+        assert route not in links, f"{route}: related section links to itself"
+        for link in links:
+            related_path = ROOT / link.lstrip("/") / "index.html"
+            assert related_path.is_file(), f"{route}: broken related link {link}"
     print(
         f"Static checks passed: {len(expected_urls)} canonical URLs, "
         f"{json_ld_blocks} valid JSON-LD blocks"

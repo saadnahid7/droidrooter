@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Integrate the six approved rescue articles into the generated DroidRooter site."""
+"""Integrate the twelve approved rescue articles into the generated DroidRooter site."""
 
 from __future__ import annotations
 
@@ -22,6 +22,12 @@ ARTICLE_SPECS = [
     ("B04-magisk-flash-failed-recovery", "2026-08-24"),
     ("B05-stuck-in-recovery-mode-android", "2026-08-26"),
     ("B06-fastboot-device-not-detected", "2026-08-28"),
+    ("B07-edl-mode-explained", "2026-08-17"),
+    ("B08-failed-ota-update-rooted-phone", "2026-08-19"),
+    ("B09-odin-fail-errors-samsung", "2026-08-21"),
+    ("B10-bootloop-after-custom-rom", "2026-08-23"),
+    ("B11-android-wont-turn-on-diagnosis", "2026-08-25"),
+    ("B12-recover-data-from-bricked-phone", "2026-08-27"),
 ]
 
 HERO_IMAGES = {
@@ -31,6 +37,75 @@ HERO_IMAGES = {
     "magisk-flash-failed-recovery": "magisk-modules.webp",
     "stuck-in-recovery-mode-android": "bootloader-recovery.webp",
     "fastboot-device-not-detected": "bootloader-recovery.webp",
+    "edl-mode-explained": "bootloader-recovery.webp",
+    "failed-ota-update-rooted-phone": "android-features.webp",
+    "odin-fail-errors-samsung": "samsung-root.webp",
+    "bootloop-after-custom-rom": "custom-roms.webp",
+    "android-wont-turn-on-diagnosis": "broken-phone-fix.webp",
+    "recover-data-from-bricked-phone": "storage-recovery.webp",
+}
+
+RELATED_GUIDES = {
+    "android-bootloop-fix-without-losing-data": [
+        "phone-stuck-on-boot-screen",
+        "soft-brick-vs-hard-brick",
+        "magisk-flash-failed-recovery",
+    ],
+    "phone-stuck-on-boot-screen": [
+        "android-bootloop-fix-without-losing-data",
+        "android-wont-turn-on-diagnosis",
+        "stuck-in-recovery-mode-android",
+    ],
+    "soft-brick-vs-hard-brick": [
+        "edl-mode-explained",
+        "magisk-flash-failed-recovery",
+        "bootloop-after-custom-rom",
+    ],
+    "magisk-flash-failed-recovery": [
+        "failed-ota-update-rooted-phone",
+        "soft-brick-vs-hard-brick",
+        "stuck-in-recovery-mode-android",
+    ],
+    "stuck-in-recovery-mode-android": [
+        "android-bootloop-fix-without-losing-data",
+        "phone-stuck-on-boot-screen",
+        "fastboot-device-not-detected",
+    ],
+    "fastboot-device-not-detected": [
+        "soft-brick-vs-hard-brick",
+        "android-bootloop-fix-without-losing-data",
+        "edl-mode-explained",
+    ],
+    "edl-mode-explained": [
+        "soft-brick-vs-hard-brick",
+        "fastboot-device-not-detected",
+        "recover-data-from-bricked-phone",
+    ],
+    "failed-ota-update-rooted-phone": [
+        "magisk-flash-failed-recovery",
+        "odin-fail-errors-samsung",
+        "bootloop-after-custom-rom",
+    ],
+    "odin-fail-errors-samsung": [
+        "failed-ota-update-rooted-phone",
+        "magisk-flash-failed-recovery",
+        "soft-brick-vs-hard-brick",
+    ],
+    "bootloop-after-custom-rom": [
+        "soft-brick-vs-hard-brick",
+        "android-bootloop-fix-without-losing-data",
+        "magisk-flash-failed-recovery",
+    ],
+    "android-wont-turn-on-diagnosis": [
+        "phone-stuck-on-boot-screen",
+        "android-bootloop-fix-without-losing-data",
+        "recover-data-from-bricked-phone",
+    ],
+    "recover-data-from-bricked-phone": [
+        "android-wont-turn-on-diagnosis",
+        "android-bootloop-fix-without-losing-data",
+        "edl-mode-explained",
+    ],
 }
 
 AUTHORS = {
@@ -516,7 +591,20 @@ def author_bio(author: str) -> str:
     )
 
 
-def render_article(article: dict) -> str:
+def more_guides(article: dict, articles: list[dict]) -> str:
+    articles_by_slug = {item["slug"]: item for item in articles}
+    related = [articles_by_slug[slug] for slug in RELATED_GUIDES[article["slug"]]]
+    return scoped(
+        '<section class="dr-related" aria-labelledby="dr-related-heading">'
+        '<h2 id="dr-related-heading">More Android Guides</h2>'
+        '<div class="dr-related-grid">'
+        + "".join(card(item) for item in related)
+        + "</div></section>",
+        "xj4yj4fu",
+    )
+
+
+def render_article(article: dict, articles: list[dict]) -> str:
     template = ARTICLE_TEMPLATE.read_text(encoding="utf-8")
     prefix, tail = template.split("<main>", 1)[0], template.split("</main>", 1)[1]
     canonical = f'https://www.droidrooter.com/blog/{article["slug"]}'
@@ -545,7 +633,7 @@ def render_article(article: dict) -> str:
 </header>''',
         "k2pn77o4",
     )
-    main = f'''<main><article class="dr-article" data-astro-cid-bvzihdzo><div class="dr-article-inner" data-astro-cid-bvzihdzo><div class="dr-article-main" data-astro-cid-bvzihdzo>{hero}{toc_html(headings, mobile=True)}<div class="dr-prose prose prose-invert" data-astro-cid-bvzihdzo>{body}</div>{author_bio(article["author"])}</div><aside class="dr-article-side" aria-label="Article navigation" data-astro-cid-bvzihdzo>{toc_html(headings)}</aside></div></article></main>'''
+    main = f'''<main><article class="dr-article" data-astro-cid-bvzihdzo><div class="dr-article-inner" data-astro-cid-bvzihdzo><div class="dr-article-main" data-astro-cid-bvzihdzo>{hero}{toc_html(headings, mobile=True)}<div class="dr-prose prose prose-invert" data-astro-cid-bvzihdzo>{body}</div>{author_bio(article["author"])}{more_guides(article, articles)}</div><aside class="dr-article-side" aria-label="Article navigation" data-astro-cid-bvzihdzo>{toc_html(headings)}</aside></div></article></main>'''
     return prefix + main + tail
 
 
@@ -726,7 +814,7 @@ def main() -> None:
     for article in articles:
         destination = ROOT / "blog" / article["slug"] / "index.html"
         destination.parent.mkdir(parents=True, exist_ok=True)
-        destination.write_text(render_article(article), encoding="utf-8")
+        destination.write_text(render_article(article, articles), encoding="utf-8")
 
     for name in ("Imran R.", "Ontor Zubair"):
         destination = ROOT / "team" / AUTHORS[name]["slug"] / "index.html"
@@ -734,7 +822,7 @@ def main() -> None:
         destination.write_text(render_author(name), encoding="utf-8")
 
     # Newest first, matching the current blog index convention.
-    index_articles = list(reversed(articles))
+    index_articles = sorted(articles, key=lambda article: article["datePublished"], reverse=True)
     add_cards(ROOT / "blog/index.html", index_articles)
     add_cards(
         ROOT / "blog/category/troubleshooting/index.html",
