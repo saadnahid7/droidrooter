@@ -17,7 +17,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://www.droidrooter.com"
-CUTOFF = dt.date(2026, 8, 28)
+CUTOFF = dt.date.today()
 CANONICAL = re.compile(r'<link rel="canonical" href="([^"]+)">')
 CANONICAL_PATH_REDIRECT_MARKER = "<script data-canonical-path-redirect>"
 ROBOTS_NOINDEX = re.compile(

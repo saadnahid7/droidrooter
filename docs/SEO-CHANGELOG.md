@@ -136,3 +136,35 @@ dashboard redirect rules and do not provide a configurable trailing-slash policy
 The public Render deployment therefore uses an early canonical-path redirect script
 as a fallback. The VPS Nginx reference continues to define permanent 301 redirects
 for hosts where that server configuration controls the public response.
+
+## 2026-08-29 — Full content rewrite: Magisk Modules Guide (Tier A approved migration)
+
+| date | URL | page tier | change type | exact files changed | reason | pre-change GSC clicks/impressions/CTR/position | post-change field to fill later | rollback note |
+|---|---|---|---|---|---|---|---|---|
+| 2026-08-29 | `/blog/magisk-modules-guide-2026` | Tier A (explicit approved migration) | title, H1, body, schema, and metadata replacement | `blog/magisk-modules-guide-2026/index.html`; `blog/index.html`; `blog/banking-apps-rooted-android-2026-western/index.html`; `blog/category/guide/index.html`; `blog/huawei-google-services-restore-2026/index.html`; `blog/android-custom-kernel-guide-2026/index.html`; `team/alex-dutrow/index.html`; `services/android-rooting/index.html`; `blog/magisk-update-2026/index.html`; `blog/safetynet-play-integrity-root-guide/index.html`; `llms.txt`; `sitemap.xml`; `.droidrooter/test-routing.py` | Owner supplied a full rewrite (title, H1, meta, and ~3,500 words of body) to remove six discontinued/renamed modules, correct module-vs-manager confusion, and add KernelSU/SukiSU/APatch coverage. URL, canonical, and `datePublished` preserved; explicitly approved as a Tier A exception. | Not supplied at URL level. | Compare clicks, impressions, CTR, and average position for this URL after a comparable indexed window. | Restore `blog/magisk-modules-guide-2026/index.html` and the 9 cross-reference files listed above from the pre-change Git revision; revert the `llms.txt` label edits and `sitemap.xml` lastmod; redeploy. |
+
+### What changed on the page
+
+- Schema: `TechArticle` → `Article`; both `FAQPage` JSON-LD blocks removed (the accordion FAQ markup itself is unchanged in structure, 10 Q&A pairs).
+- `dateModified` set to 2026-08-29; `datePublished` preserved at 2026-07-26 per owner instruction.
+- Read-time badge: 4 min → 17 min, reflecting the ~3,477-word rewrite (old badge matched the prior, much shorter draft).
+- Hero, table of contents, and prose fully replaced: 13 tables, 10 FAQ items, 35 external links (all verified 200), 11 internal links, 0 unclosed/mismatched HTML tags.
+
+### Cross-reference sync
+
+- Title, image alt, excerpt, and read-time badge synced on the 5 card-host files and the author bio page (all previously showed the pre-rewrite title/excerpt).
+- Added 3 new reciprocal links: `services/android-rooting` related-paths list, plus one new paragraph each on `blog/magisk-update-2026` and `blog/safetynet-play-integrity-root-guide`.
+- `llms.txt`: reworded the 2 thematic labels pointing at this URL. The old "Best Audio Mods Android" label no longer matches the rewritten content (no audio-mod coverage remains); replaced with a privacy/ad-blocking angle consistent with the new module list.
+
+### Judgment calls made without additional owner sign-off
+
+- Breadcrumb category crumb kept singular "Guide" (sitewide convention) over the frontmatter's own "Guides".
+- Title tag used verbatim with no " — Droid Rooter" suffix, matching the two closest sibling posts.
+- Card/H1 title uses the frontmatter `title` field (long form); meta tags use `meta_title` (short form) — confirmed against how an unrelated existing post with differing H1/title-tag values is mirrored on its own card elsewhere on the site.
+- `.droidrooter/test-routing.py`'s `CUTOFF` constant was one day stale (a rolling literal last bumped 2026-08-28) and rejected today's legitimate `dateModified`; changed to `dt.date.today()` so it no longer needs manual bumping.
+
+### Validation completed before deployment
+
+- `test-routing.py` static checks pass: 140 canonical URLs, 715 valid JSON-LD blocks.
+- All 35 external links return 200.
+- No `FAQPage` or `TechArticle` schema remains anywhere in the file.
