@@ -19,6 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://www.droidrooter.com"
 CUTOFF = dt.date(2026, 8, 28)
 CANONICAL = re.compile(r'<link rel="canonical" href="([^"]+)">')
+CANONICAL_PATH_REDIRECT_MARKER = "<script data-canonical-path-redirect>"
 ROBOTS_NOINDEX = re.compile(
     r'<meta name="robots" content="[^"]*noindex[^"]*">', re.IGNORECASE
 )
@@ -78,6 +79,18 @@ def static_checks() -> None:
         if relative.parts[0] in {"docs", ".droidrooter"}:
             continue
         text = path.read_text(encoding="utf-8", errors="ignore")
+        assert "search_term_string" not in text, (
+            f"{relative}: inactive SearchAction placeholder remains"
+        )
+        if relative.as_posix() != "404.html" and "<head>" in text:
+            assert text.count(CANONICAL_PATH_REDIRECT_MARKER) == 1, (
+                f"{relative}: expected one canonical-path redirect script"
+            )
+        for href in re.findall(r'\bhref=["\'](/[^"\']*)["\']', text):
+            href_path = urllib.parse.urlsplit(html.unescape(href)).path
+            assert href_path == "/" or not href_path.endswith("/"), (
+                f"{relative}: trailing-slash internal link remains: {href}"
+            )
         for value in ISO_DATE.findall(text):
             assert dt.date.fromisoformat(value) <= CUTOFF, (
                 f"{relative}: future date remains: {value}"
@@ -144,6 +157,8 @@ def static_checks() -> None:
     nginx_conf = (ROOT / ".droidrooter" / "nginx-droidrooter.conf").read_text(
         encoding="utf-8"
     )
+    assert "location ~ ^(.+)/index\\.html$" in nginx_conf
+    assert "location ~ ^(.+)/$" in nginx_conf
     redirect_sources = set(re.findall(r"location = (\S+)", nginx_conf))
     assert not (HIGH_RISK_SOURCES & redirect_sources), (
         "High-risk source was added to permanent redirects"

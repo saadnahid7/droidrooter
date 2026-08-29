@@ -8,7 +8,7 @@ import datetime as dt
 import html
 import re
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urlsplit, urlunsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://www.droidrooter.com"
@@ -22,6 +22,25 @@ VISIBLE_DATE = re.compile(
     r"([0-3]?[0-9]), (2026)\b"
 )
 CANONICAL = re.compile(r'<link rel="canonical" href="([^"]+)">')
+INACTIVE_SEARCH_ACTION = re.compile(
+    r',"potentialAction":\{"@type":"SearchAction",'
+    r'"target":"https://www\.droidrooter\.com/blog\?q=\{search_term_string\}",'
+    r'"query-input":"required name=search_term_string"\}'
+)
+CANONICAL_PATH_REDIRECT = (
+    '<script data-canonical-path-redirect>'
+    '!function(){var p=window.location.pathname;'
+    'if(p==="/index.html"){window.location.replace("/"+window.location.search+window.location.hash)}'
+    'else if(p.endsWith("/index.html")){'
+    'window.location.replace(p.slice(0,-11)+window.location.search+window.location.hash)}'
+    'else if(p.length>1&&p.endsWith("/")){'
+    'window.location.replace(p.slice(0,-1)+window.location.search+window.location.hash)}}();'
+    "</script>"
+)
+CANONICAL_PATH_REDIRECT_BLOCK = re.compile(
+    r"<script data-canonical-path-redirect>.*?</script>"
+)
+INTERNAL_HREF = re.compile(r'(?P<prefix>\bhref=["\'])(?P<url>/[^"\']*)(?P<suffix>["\'])')
 ROBOTS_NOINDEX = re.compile(
     r'<meta name="robots" content="[^"]*noindex[^"]*">', re.IGNORECASE
 )
@@ -54,6 +73,43 @@ def replace_future_dates(text: str) -> tuple[str, int]:
     text = ISO_DATE.sub(replace_iso, text)
     text = VISIBLE_DATE.sub(replace_visible, text)
     return text, replacements
+
+
+def remove_inactive_search_action(text: str) -> tuple[str, int]:
+    return INACTIVE_SEARCH_ACTION.subn("", text)
+
+
+def add_canonical_path_redirect(text: str) -> tuple[str, int]:
+    existing = CANONICAL_PATH_REDIRECT_BLOCK.findall(text)
+    if len(existing) > 1:
+        raise ValueError("HTML document has multiple canonical-path redirect scripts")
+    if existing:
+        if existing[0] == CANONICAL_PATH_REDIRECT:
+            return text, 0
+        return CANONICAL_PATH_REDIRECT_BLOCK.sub(
+            CANONICAL_PATH_REDIRECT, text, count=1
+        ), 1
+    if "<head>" not in text:
+        return text, 0
+    return text.replace("<head>", "<head>" + CANONICAL_PATH_REDIRECT, 1), 1
+
+
+def normalize_internal_links(text: str) -> tuple[str, int]:
+    changes = 0
+
+    def replace(match: re.Match[str]) -> str:
+        nonlocal changes
+        value = html.unescape(match.group("url"))
+        parts = urlsplit(value)
+        if parts.path == "/" or not parts.path.endswith("/"):
+            return match.group(0)
+        normalized = urlunsplit(
+            (parts.scheme, parts.netloc, parts.path.rstrip("/"), parts.query, parts.fragment)
+        )
+        changes += 1
+        return match.group("prefix") + normalized + match.group("suffix")
+
+    return INTERNAL_HREF.sub(replace, text), changes
 
 
 def canonical_route_for_file(path: Path) -> str:
@@ -122,17 +178,30 @@ def run(write: bool) -> int:
     }
 
     changed_pages: set[Path] = set()
+    modified_files: set[Path] = set()
     replacement_count = 0
+    search_action_count = 0
+    redirect_script_count = 0
+    internal_link_count = 0
     for path in sorted(ROOT.rglob("*.html")):
         relative = path.relative_to(ROOT)
         if relative.parts[0] in {"docs", ".droidrooter"}:
             continue
         original = path.read_text(encoding="utf-8", errors="ignore")
         updated, count = replace_future_dates(original)
+        if count:
+            changed_pages.add(path)
+        updated, removed_search_actions = remove_inactive_search_action(updated)
+        search_action_count += removed_search_actions
+        updated, normalized_internal_links = normalize_internal_links(updated)
+        internal_link_count += normalized_internal_links
         if relative.as_posix() == "404.html":
             updated = CANONICAL.sub("", updated)
+        else:
+            updated, added_redirect_scripts = add_canonical_path_redirect(updated)
+            redirect_script_count += added_redirect_scripts
         if updated != original:
-            changed_pages.add(path)
+            modified_files.add(path)
             replacement_count += count
             if write:
                 path.write_text(updated, encoding="utf-8")
@@ -144,8 +213,11 @@ def run(write: bool) -> int:
         (ROOT / "sitemap.xml").write_text(sitemap, encoding="utf-8")
 
     mode = "updated" if write else "would update"
-    print(f"{mode} {len(changed_pages)} HTML files")
+    print(f"{mode} {len(modified_files)} HTML files")
     print(f"{mode} {replacement_count} future-date tokens")
+    print(f"{mode} {search_action_count} inactive SearchAction blocks")
+    print(f"{mode} {redirect_script_count} canonical-path redirect scripts")
+    print(f"{mode} {internal_link_count} trailing-slash internal links")
     print(f"sitemap entries: {len(entries)}")
     print(f"sitemap changed: {sitemap_changed}")
     return 0
