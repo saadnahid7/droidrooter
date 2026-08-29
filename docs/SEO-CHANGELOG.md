@@ -66,11 +66,17 @@ For each entry, record the first comparable GSC window after enough time has pas
 
 - Homepage: `/index`, `/index/`, `/index.html`, `/index.php` → `/`
 - Core `.html` aliases: `/about.html`, `/blog.html`, `/contact.html`, `/faq.html`, `/glossary.html`, `/how-it-works.html`, `/locations.html`, `/portfolio.html`, `/pricing.html`, `/privacy.html`, `/services.html`, and `/terms.html` → their matching no-slash canonical
-- Redirect-only device hub: `/devices`, `/devices/`, `/devices/index.html`, and `/devices.html` → `/devices/samsung`
+- Device hub aliases (superseded 2026-08-29): `/devices/`, `/devices/index.html`, and `/devices.html` → `/devices`; `/devices` is now an indexable hub instead of redirecting to Samsung
 - Redirect-only tools hub: `/tools`, `/tools/`, `/tools/index.html`, and `/tools.html` → `/tools/rootability-checker`
 - Generic one-, two-, and three-segment trailing-slash and `/index.html` aliases → the corresponding no-slash canonical
 
 Redirects are implemented as nginx `location =` and regex rules in `/etc/nginx/conf.d/droidrooter.conf` on the VPS (the site is served by standalone nginx on port 8094, not Cloudflare Pages). Query strings are preserved via `$is_args$args`. Existing legacy blog-slug redirect destinations were also normalized to no-slash targets to avoid two-hop chains.
+
+## 2026-08-29 — Devices hub restoration and brand expansion
+
+| date | URL | page tier | change type | exact files changed | reason | pre-change GSC clicks/impressions/CTR/position | post-change field to fill later | rollback note |
+|---|---|---|---|---|---|---|---|---|
+| 2026-08-29 | `https://www.droidrooter.com/devices` | Supporting hub | content restoration, canonical correction, internal navigation | `devices/index.html`; `sitemap.xml`; `.droidrooter/nginx-droidrooter.conf`; `.droidrooter/test-routing.py`; `llms.txt` | The device hub incorrectly redirected and canonicalized to Samsung. Restore it as a standalone index of seven dedicated brand guides and add model-eligibility paths for Sony, Nokia/HMD, ASUS, Nothing, Honor, Tecno/Infinix, Huawei and ZTE without promising universal rootability. | Not supplied. | Track `/devices` impressions, clicks and indexed status after recrawl. | Restore the prior redirect stub, Samsung canonical and Nginx aliases from the previous Git revision. |
 
 ### Deliberately deferred
 

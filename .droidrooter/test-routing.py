@@ -259,7 +259,7 @@ def live_checks(base_url: str) -> None:
         "/about/": "/about",
         "/about/index.html": "/about",
         "/contact.html": "/contact",
-        "/devices/": "/devices/samsung",
+        "/devices/": "/devices",
         "/tools/": "/tools/rootability-checker",
     }
     for source, destination in aliases.items():

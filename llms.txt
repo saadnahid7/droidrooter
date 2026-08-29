@@ -80,7 +80,9 @@ URL: https://www.droidrooter.com/how-it-works/
 
 ## Supported Devices
 
-Full support lists by brand:
+Device support hub: https://www.droidrooter.com/devices
+
+Dedicated compatibility guides by brand:
 - Samsung (Galaxy S, A, M, Note, Fold, Z series): https://www.droidrooter.com/devices/samsung/
 - Google Pixel (all generations): https://www.droidrooter.com/devices/google-pixel/
 - Xiaomi / Redmi / POCO: https://www.droidrooter.com/devices/xiaomi/
@@ -88,6 +90,11 @@ Full support lists by brand:
 - Motorola / Moto series: https://www.droidrooter.com/devices/motorola/
 - Realme / OPPO: https://www.droidrooter.com/devices/realme-oppo/
 - Vivo / iQOO: https://www.droidrooter.com/devices/vivo-iqoo/
+
+Model eligibility can also be reviewed for Sony Xperia, Nokia/HMD, ASUS
+ROG/Zenfone, Nothing Phone, Honor, Tecno/Infinix, Huawei and ZTE. Support is
+not universal: exact model, region, carrier, Android version and bootloader
+policy must be checked before work begins.
 
 ## Tools
 
