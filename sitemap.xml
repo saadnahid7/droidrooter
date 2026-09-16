@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.droidrooter.com/</loc><lastmod>2026-08-16</lastmod></url>
   <url><loc>https://www.droidrooter.com/about</loc><lastmod>2026-05-04</lastmod></url>
-  <url><loc>https://www.droidrooter.com/blog</loc><lastmod>2026-09-12</lastmod></url>
+  <url><loc>https://www.droidrooter.com/blog</loc><lastmod>2026-09-15</lastmod></url>
   <url><loc>https://www.droidrooter.com/blog/android-16-features-power-users</loc><lastmod>2026-05-04</lastmod></url>
   <url><loc>https://www.droidrooter.com/blog/android-apps-keep-crashing</loc><lastmod>2026-04-01</lastmod></url>
   <url><loc>https://www.droidrooter.com/blog/android-battery-drain-fix</loc><lastmod>2026-03-05</lastmod></url>
@@ -33,10 +33,10 @@
   <url><loc>https://www.droidrooter.com/blog/category/comparison</loc><lastmod>2026-08-16</lastmod></url>
   <url><loc>https://www.droidrooter.com/blog/category/guide</loc><lastmod>2026-08-16</lastmod></url>
   <url><loc>https://www.droidrooter.com/blog/category/how-to</loc><lastmod>2026-08-16</lastmod></url>
-  <url><loc>https://www.droidrooter.com/blog/category/news</loc><lastmod>2026-05-04</lastmod></url>
+  <url><loc>https://www.droidrooter.com/blog/category/news</loc><lastmod>2026-09-15</lastmod></url>
   <url><loc>https://www.droidrooter.com/blog/category/review</loc><lastmod>2026-05-04</lastmod></url>
   <url><loc>https://www.droidrooter.com/blog/category/tips</loc><lastmod>2026-05-04</lastmod></url>
-  <url><loc>https://www.droidrooter.com/blog/category/troubleshooting</loc><lastmod>2026-09-12</lastmod></url>
+  <url><loc>https://www.droidrooter.com/blog/category/troubleshooting</loc><lastmod>2026-09-15</lastmod></url>
   <url><loc>https://www.droidrooter.com/blog/edl-mode-explained</loc><lastmod>2026-08-17</lastmod></url>
   <url><loc>https://www.droidrooter.com/blog/factory-reset-android-before-selling</loc><lastmod>2026-03-15</lastmod></url>
   <url><loc>https://www.droidrooter.com/blog/failed-ota-update-rooted-phone</loc><lastmod>2026-08-19</lastmod></url>
@@ -133,15 +133,17 @@
   <url><loc>https://www.droidrooter.com/services/performance-repair</loc><lastmod>2026-05-04</lastmod></url>
   <url><loc>https://www.droidrooter.com/services/privacy-hardening</loc><lastmod>2026-05-04</lastmod></url>
   <url><loc>https://www.droidrooter.com/services/senior-setup</loc><lastmod>2026-05-04</lastmod></url>
-  <url><loc>https://www.droidrooter.com/team/alex-dutrow</loc><lastmod>2026-09-12</lastmod></url>
+  <url><loc>https://www.droidrooter.com/team/alex-dutrow</loc><lastmod>2026-09-15</lastmod></url>
   <url><loc>https://www.droidrooter.com/team/imran-r</loc><lastmod>2026-09-12</lastmod></url>
   <url><loc>https://www.droidrooter.com/team/naz-n</loc><lastmod>2026-09-12</lastmod></url>
   <url><loc>https://www.droidrooter.com/team/ontor-zubair</loc><lastmod>2026-08-28</lastmod></url>
-  <url><loc>https://www.droidrooter.com/team/saad-nahid</loc><lastmod>2026-09-12</lastmod></url>
+  <url><loc>https://www.droidrooter.com/team/saad-nahid</loc><lastmod>2026-09-15</lastmod></url>
   <url><loc>https://www.droidrooter.com/terms</loc><lastmod>2026-05-04</lastmod></url>
   <url><loc>https://www.droidrooter.com/tools/rootability-checker</loc><lastmod>2026-05-04</lastmod></url>
   <url><loc>https://www.droidrooter.com/blog/google-messages-rcs-error-3100-stuck-setting-up</loc><lastmod>2026-09-12</lastmod></url>
   <url><loc>https://www.droidrooter.com/blog/android-esim-transfer-failed</loc><lastmod>2026-09-12</lastmod></url>
   <url><loc>https://www.droidrooter.com/blog/android-auto-keeps-disconnecting-after-update</loc><lastmod>2026-09-12</lastmod></url>
   <url><loc>https://www.droidrooter.com/blog/recover-android-data-broken-screen-no-usb-debugging</loc><lastmod>2026-09-12</lastmod></url>
+  <url><loc>https://www.droidrooter.com/blog/android-sideloading-changes-2026</loc><lastmod>2026-09-15</lastmod></url>
+  <url><loc>https://www.droidrooter.com/blog/android-notifications-delayed-until-unlock</loc><lastmod>2026-09-15</lastmod></url>
 </urlset>

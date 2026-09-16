@@ -280,3 +280,8 @@ This file is provided to help AI models, large language models, and AI-powered s
 - [Android eSIM Transfer Failed: Pixel, Samsung and Carrier Troubleshooting](https://www.droidrooter.com/blog/android-esim-transfer-failed)
 - [Android Auto Keeps Disconnecting After an Update: Samsung and Pixel Fixes](https://www.droidrooter.com/blog/android-auto-keeps-disconnecting-after-update)
 - [Recover Android Data With a Broken Screen and No USB Debugging](https://www.droidrooter.com/blog/recover-android-data-broken-screen-no-usb-debugging)
+
+## Notifications and Android app installation — September 2026
+
+- [Android Sideloading Changes in 2026: What US, UK, Canada and EU Users Need to Know](https://www.droidrooter.com/blog/android-sideloading-changes-2026)
+- [Android Notifications Only Arrive When You Unlock? Samsung and Pixel Fixes](https://www.droidrooter.com/blog/android-notifications-delayed-until-unlock)
