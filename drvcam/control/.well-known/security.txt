@@ -1,0 +1,3 @@
+Contact: mailto:security@droidrooter.com
+Preferred-Languages: en
+Canonical: https://droidrooter.com/.well-known/security.txt
