@@ -21,7 +21,7 @@ CUTOFF = dt.date.today()
 CANONICAL = re.compile(r'<link rel="canonical" href="([^"]+)">')
 CANONICAL_PATH_REDIRECT_MARKER = "<script data-canonical-path-redirect>"
 ROBOTS_NOINDEX = re.compile(
-    r'<meta name="robots" content="[^"]*noindex[^"]*">', re.IGNORECASE
+    r'<meta name="robots" content="[^"]*noindex[^"]*"\s*/?>', re.IGNORECASE
 )
 META_REFRESH = re.compile(r'<meta[^>]+http-equiv="refresh"', re.IGNORECASE)
 JSON_LD = re.compile(
@@ -82,7 +82,16 @@ def static_checks() -> None:
         assert "search_term_string" not in text, (
             f"{relative}: inactive SearchAction placeholder remains"
         )
-        if relative.as_posix() != "404.html" and "<head>" in text:
+        is_private_control_surface = relative.parts[:2] == ("drvcam", "control")
+        if is_private_control_surface:
+            assert ROBOTS_NOINDEX.search(text), (
+                f"{relative}: private control surface must remain noindex"
+            )
+            continue
+        if (
+            relative.as_posix() != "404.html"
+            and "<head>" in text
+        ):
             assert text.count(CANONICAL_PATH_REDIRECT_MARKER) == 1, (
                 f"{relative}: expected one canonical-path redirect script"
             )
@@ -159,6 +168,19 @@ def static_checks() -> None:
     )
     assert "location ~ ^(.+)/index\\.html$" in nginx_conf
     assert "location ~ ^(.+)/$" in nginx_conf
+    # The dashboard is an authenticated control surface.  Its headers belong
+    # in the actual nginx server block: static-host `_headers` files are not
+    # interpreted by this deployment.
+    for required_header in (
+        "add_header Content-Security-Policy",
+        "add_header X-Frame-Options \"DENY\" always",
+        "add_header X-Content-Type-Options \"nosniff\" always",
+        "add_header Referrer-Policy \"no-referrer\" always",
+        "add_header Permissions-Policy",
+    ):
+        assert required_header in nginx_conf, (
+            f"nginx reference is missing dashboard security header: {required_header}"
+        )
     redirect_sources = set(re.findall(r"location = (\S+)", nginx_conf))
     assert not (HIGH_RISK_SOURCES & redirect_sources), (
         "High-risk source was added to permanent redirects"
