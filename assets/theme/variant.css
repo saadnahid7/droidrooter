@@ -1,0 +1,20 @@
+/* terminal: an open, spacious terminal-inspired reading experience. */
+html[data-design=terminal] .dr-hero-sec{padding:70px 24px 0;background:linear-gradient(110deg,var(--dr-tint),var(--dr-bg));border-bottom:1px solid var(--dr-line)}
+html[data-design=terminal] .dr-hero-sec-inner{text-align:left;max-width:1180px}
+html[data-design=terminal] .dr-hero-title{max-width:1050px;font-size:clamp(2.2rem,4.4vw,4.1rem);margin:0 0 24px}
+html[data-design=terminal] .dr-hero-sub{max-width:720px;margin:0 0 30px}
+html[data-design=terminal] .dr-hero-cta{justify-content:flex-start}
+html[data-design=terminal] .dr-hero-trust{display:flex;justify-content:space-between;border-radius:4px 4px 0 0;padding:26px;margin-top:45px;background:var(--dr-panel);border:1px solid var(--dr-line);border-bottom:0}
+html[data-design=terminal] :is(.dr-spc-head,.dr-sgrid-head,.dr-hiw-head,.dr-tg-head,.dr-bp-head){text-align:left;margin-left:0}
+html[data-design=terminal] .dr-spc-grid{padding:0;gap:16px;background:none;border:0;box-shadow:none}
+html[data-design=terminal] .dr-spc-card{padding:26px;border:1px solid var(--dr-line);align-items:flex-start;text-align:left;background:var(--dr-tint)}
+html[data-design=terminal] .dr-sgrid-card{padding:28px;box-shadow:4px 4px 0 var(--dr-tint);border:1px solid var(--dr-line)}
+html[data-design=terminal] .dr-sgrid-card:hover{box-shadow:6px 6px 0 var(--dr-tint);border-color:var(--dr-accent)}
+html[data-design=terminal] .dr-blog-featured{border-radius:4px;border-color:var(--dr-line);background:var(--dr-panel)}
+html[data-design=terminal] .dr-blog-hero{padding-top:60px;padding-bottom:35px;background:var(--dr-tint);border-bottom:1px solid var(--dr-line)}
+html[data-design=terminal] .dr-blog-h1{max-width:1000px;line-height:1.2}
+html[data-design=terminal] .dr-blog-grid{gap:24px}
+html[data-design=terminal] .dr-bcard{box-shadow:3px 3px 0 var(--dr-tint)}
+html[data-design=terminal] .dr-bcard:hover{border-color:var(--dr-accent);box-shadow:5px 5px 0 var(--dr-tint)}
+html[data-design=terminal] .dr-takeaways{background:var(--dr-tint);border-left:3px solid var(--dr-accent)}
+@media(max-width:640px){html[data-design=terminal] .dr-hero-sec{padding-top:40px}html[data-design=terminal] .dr-hero-trust{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;padding:20px}html[data-design=terminal] .dr-hero-trust-item{flex-direction:column;align-items:flex-start}html[data-design=terminal] .dr-spc-card{padding:18px}}
