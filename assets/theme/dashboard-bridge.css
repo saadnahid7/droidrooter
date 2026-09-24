@@ -1,0 +1,6 @@
+/* Sign-in theme control; authenticated users use the console's native theme menu. */
+.dr-dashboard-toggle[hidden]{display:none!important}
+.dr-dashboard-toggle{position:fixed;right:20px;bottom:20px;z-index:1000;padding:10px 16px;border:1px solid var(--line,#36515c);border-radius:8px;background:var(--surface,#111d25);color:var(--ink,#ecf3f6);font:600 14px/1.4 system-ui,sans-serif;cursor:pointer;box-shadow:0 5px 18px #0005}
+.dr-dashboard-toggle:hover{border-color:var(--accent,#64e6ae)}
+.dr-dashboard-toggle:focus-visible{outline:3px solid var(--accent,#64e6ae);outline-offset:3px}
+@media(max-width:600px){.dr-dashboard-toggle{bottom:12px;right:12px}}

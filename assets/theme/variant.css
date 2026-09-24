@@ -1,0 +1,32 @@
+/* command: compact control panels and a structured terminal layout. */
+html[data-design] .dr-hero-sec{padding:65px 24px;background-color:var(--dr-bg);background-image:linear-gradient(color-mix(in srgb,var(--dr-line) 28%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--dr-line) 28%,transparent) 1px,transparent 1px);background-size:40px 40px;border-bottom:1px solid var(--dr-line)}
+html[data-design] .dr-hero-sec-inner{display:grid;grid-template-columns:minmax(0,1fr) 260px;column-gap:65px;text-align:left;max-width:1180px}
+html[data-design] .dr-hero-badge{grid-column:1;justify-self:start;border-radius:3px}
+html[data-design] .dr-hero-title{grid-column:1;font-size:clamp(2.2rem,4.1vw,3.9rem);margin:0 0 24px}
+html[data-design] .dr-hero-sub{grid-column:1;margin:0 0 28px;max-width:700px}
+html[data-design] .dr-hero-cta{grid-column:1;justify-content:flex-start;margin:0}
+html[data-design] .dr-hero-trust{grid-column:2;grid-row:1/5;display:flex;flex-direction:column;align-self:center;gap:0;padding:0;margin:0;background:var(--dr-panel);border:1px solid var(--dr-line);border-radius:4px;box-shadow:8px 8px 0 color-mix(in srgb,var(--dr-line) 25%,transparent);backdrop-filter:none}
+html[data-design] .dr-hero-trust-item{width:100%;display:flex;flex-direction:column;align-items:flex-start;gap:4px;padding:22px 26px;border-bottom:1px solid var(--dr-line)}
+html[data-design] .dr-hero-trust-item:last-child{border-bottom:0}
+html[data-design] .dr-hero-trust-sep{display:none}
+html[data-design] .dr-hero-trust-num{font:26px/1.4 var(--font-mono,monospace)}
+html[data-design] .dr-hero-trust-label{font:13px/1.4 var(--font-mono,monospace)}
+html[data-design] :is(.dr-spc-head,.dr-sgrid-head,.dr-hiw-head,.dr-tg-head,.dr-bp-head){text-align:left;margin-left:0}
+html[data-design] .dr-spc-grid{padding:0;gap:0;border-radius:4px;background:var(--dr-panel);box-shadow:none}
+html[data-design] .dr-spc-card{padding:26px;border-right:1px solid var(--dr-line);align-items:flex-start;text-align:left}
+html[data-design] .dr-spc-card:last-child{border:0}
+html[data-design] .dr-spc-num{font:38px/1.4 var(--font-mono,monospace)}
+html[data-design] .dr-sgrid-grid{gap:1px;background:var(--dr-line);border:1px solid var(--dr-line)}
+html[data-design] .dr-sgrid-card{padding:30px;border:0;border-radius:0;box-shadow:none;transform:none}
+html[data-design] .dr-sgrid-card:hover{background:var(--dr-tint);box-shadow:inset 0 3px var(--dr-accent)}
+html[data-design] .dr-blog-hero{padding-top:55px;border-bottom:1px solid var(--dr-line);background:var(--dr-panel)}
+html[data-design] .dr-blog-featured{background:var(--dr-panel);border-radius:4px;border-color:var(--dr-line);box-shadow:8px 8px 0 color-mix(in srgb,var(--dr-line) 25%,transparent)}
+html[data-design] .dr-blog-featured-title{color:var(--dr-accent)}
+html[data-design] .dr-blog-grid{gap:1px;background:var(--dr-line);border:1px solid var(--dr-line)}
+html[data-design] .dr-blog-grid .dr-bcard{border:0;border-radius:0;transform:none}
+html[data-design] .dr-blog-grid .dr-bcard:hover{background:var(--dr-tint);box-shadow:inset 0 3px var(--dr-accent)}
+html[data-design] .dr-takeaways{border-top:3px solid var(--dr-accent)}
+html[data-design] .dr-prose h2{padding-top:22px;border-top:1px solid var(--dr-line)}
+html[data-design] .dr-toc-heading{font-family:var(--font-mono,monospace);color:var(--dr-accent)}
+@media(max-width:900px){html[data-design] .dr-hero-sec-inner{column-gap:30px;grid-template-columns:minmax(0,1fr) 210px}html[data-design] .dr-hero-trust-item{padding:18px}}
+@media(max-width:680px){html[data-design] .dr-hero-sec{padding:40px 20px}html[data-design] .dr-hero-sec-inner{display:flex;flex-direction:column}html[data-design] .dr-hero-badge{align-self:flex-start}html[data-design] .dr-hero-trust{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;margin-top:35px}html[data-design] .dr-hero-trust-item{border-bottom:0;padding:18px}html[data-design] .dr-hero-trust-num{font-size:22px}html[data-design] .dr-spc-card{padding:18px}html[data-design] .dr-spc-num{font-size:30px}}
