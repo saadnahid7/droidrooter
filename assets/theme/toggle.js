@@ -1,10 +1,11 @@
-/* Dark / light switch for the Command Center design. */
+/* Dark / light switch. Dark is Command Center, light is Terminal. */
 (() => {
   const root = document.documentElement;
   const COLOR_KEY = 'droidrooter-color-mode';
 
   function render(mode) {
     root.dataset.colorMode = mode;
+    root.dataset.design = mode === 'light' ? 'terminal' : 'command';
     root.style.colorScheme = mode;
     const dark = mode === 'dark';
     document.querySelectorAll('[data-theme-toggle]').forEach(button => {

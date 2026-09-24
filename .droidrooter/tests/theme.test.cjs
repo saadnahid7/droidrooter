@@ -5,7 +5,7 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '../..');
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
 
-// Head initializer: always Command Center; dark by default; saved light applies; bad or blocked storage is safe.
+// Head initializer: dark + Command Center by default; saved light gives Terminal; bad or blocked storage is safe.
 const init = read('assets/theme/init.js');
 function runInit(saved, blocked = false) {
   const html = { dataset: {}, style: {} }; const removed = [];
@@ -15,8 +15,8 @@ function runInit(saved, blocked = false) {
   return { design: html.dataset.design, color: html.dataset.colorMode, scheme: html.style.colorScheme, removed };
 }
 assert.deepEqual(runInit({}), { design: 'command', color: 'dark', scheme: 'dark', removed: ['droidrooter-design'] });
-assert.equal(runInit({ 'droidrooter-color-mode': 'light' }).color, 'light');
-// A Terminal choice saved by the earlier release no longer changes the design.
+assert.deepEqual((({design,color})=>({design,color}))(runInit({ 'droidrooter-color-mode': 'light' })), { design: 'terminal', color: 'light' });
+// A separate design choice saved by an earlier release no longer applies; the design follows the mode.
 assert.equal(runInit({ 'droidrooter-design': 'terminal' }).design, 'command');
 assert.equal(runInit({ 'droidrooter-color-mode': 'purple' }).color, 'dark');
 assert.doesNotThrow(() => runInit({}, true));
@@ -30,16 +30,17 @@ const doc = { documentElement: html, querySelectorAll(sel) { return sel === '[da
 vm.runInNewContext(read('assets/theme/toggle.js'), { document: doc, localStorage: { setItem(k, v) { store[k] = v; } }, window: { addEventListener() {} } });
 assert.equal(group.hidden, false); assert.equal(attrs['aria-pressed'], 'true'); assert.equal(label.textContent, 'Light');
 click();
-assert.equal(html.dataset.colorMode, 'light'); assert.equal(html.style.colorScheme, 'light'); assert.equal(html.dataset.design, 'command');
+assert.equal(html.dataset.colorMode, 'light'); assert.equal(html.style.colorScheme, 'light'); assert.equal(html.dataset.design, 'terminal');
 assert.equal(attrs['aria-pressed'], 'false'); assert.equal(label.textContent, 'Dark'); assert.equal(store['droidrooter-color-mode'], 'light');
-click(); assert.equal(html.dataset.colorMode, 'dark');
+click(); assert.equal(html.dataset.colorMode, 'dark'); assert.equal(html.dataset.design, 'command');
 
-// Only the Command Center stylesheet exists; it is gated and loads nothing remote.
-assert.ok(!fs.existsSync(path.join(root, 'assets/theme/terminal.css')), 'Terminal stylesheet must be removed');
-const css = read('assets/theme/command.css');
-for (const rule of css.split('}').map(r => r.trim()).filter(r => r && !r.startsWith('/*') && !r.startsWith('@media'))) {
-  const selector = rule.split('{')[0].replace(/^.*\{/, '').trim();
-  if (selector) assert.ok(selector.startsWith('html[data-design=command]'), `ungated rule ${selector}`);
+// Each design stylesheet is gated to its design and loads nothing remote.
+for (const [file, gate] of [['assets/theme/command.css', 'html[data-design=command]'], ['assets/theme/terminal.css', 'html[data-design=terminal]']]) {
+  const css = read(file);
+  for (const rule of css.split('}').map(r => r.trim()).filter(r => r && !r.startsWith('/*') && !r.startsWith('@media'))) {
+    const selector = rule.split('{')[0].replace(/^.*\{/, '').trim();
+    if (selector) assert.ok(selector.startsWith(gate), `${file}: ungated rule ${selector}`);
+  }
+  assert.doesNotMatch(css, /https?:\/\//);
 }
-assert.doesNotMatch(css, /https?:\/\//);
-console.log('PASS: Command Center only, dark default, saved/invalid/blocked storage, dark/light switch');
+console.log('PASS: dark=Command Center, light=Terminal, dark default, saved/invalid/blocked storage, switch, gated stylesheets');

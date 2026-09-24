@@ -46,7 +46,7 @@ for name in html:
  if (name in EXCLUDED or redirect) and old!=new:errors.append({'page':name,'error':'Excluded or redirect page modified'})
  elif name.startswith('drvcam/'):
   if new.count('data-dr-theme-init')!=1 or new.count('data-dashboard-theme-toggle')!=1 or '/assets/theme/base.css' in new:errors.append({'page':name,'error':'Console shell bridge missing, duplicated or loads public theme CSS'})
- elif not (name in EXCLUDED or redirect) and (new.count('data-dr-theme-init')!=1 or new.count('data-theme-controls')!=1 or new.count('data-design-toggle')!=0 or new.count('data-theme-toggle')!=1 or new.count('/assets/theme/command.css')!=1 or new.count('/assets/theme/terminal.css')!=0):errors.append({'page':name,'error':'Missing or duplicate theme controls'})
+ elif not (name in EXCLUDED or redirect) and (new.count('data-dr-theme-init')!=1 or new.count('data-theme-controls')!=1 or new.count('data-design-toggle')!=0 or new.count('data-theme-toggle')!=1 or new.count('/assets/theme/command.css')!=1 or new.count('/assets/theme/terminal.css')!=1):errors.append({'page':name,'error':'Missing or duplicate theme controls'})
  pages[name]=Page(new);oldpages[name]=Page(old)
  if re.search(r'http-equiv=["\']refresh',old,re.I):redirects.append(name)
  if pages[name].canonical!=oldpages[name].canonical or pages[name].meta!=oldpages[name].meta:errors.append({'page':name,'error':'SEO metadata changed'})

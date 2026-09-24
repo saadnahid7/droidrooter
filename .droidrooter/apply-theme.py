@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Idempotent Command Center theme installation (dark/light) for the generated static site.
+"""Idempotent theme installation for the generated static site: dark uses the
+Command Center design, light uses the Terminal design.
 
 Run after publishing new HTML. Re-running produces no diff: every addition is
 marker-delimited and removed before it is inserted again, and colour tokens are
@@ -119,7 +120,7 @@ def controls(floating):
 
 HEAD = '<!-- dr-theme-head:start --><script data-dr-theme-init src="/assets/theme/init.js"></script><!-- dr-theme-head:end -->'
 ASSETS = ('<!-- dr-theme-assets:start --><link rel="stylesheet" href="/assets/theme/base.css">'
-          '<link rel="stylesheet" href="/assets/theme/command.css">'
+          '<link rel="stylesheet" href="/assets/theme/command.css"><link rel="stylesheet" href="/assets/theme/terminal.css">'
           '<script src="/assets/theme/toggle.js" defer></script><!-- dr-theme-assets:end -->')
 
 CONSOLE_HEAD = '<!-- dr-theme-head:start --><script data-dr-theme-init src="/assets/theme/dashboard-bridge.js"></script><!-- dr-theme-head:end -->'
