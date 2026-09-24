@@ -14,14 +14,14 @@
       "sha256": "ee0dd5ef18661afc2fcc2315327ff058dc3b51f571fd1937bb14f6bdb43bf71c"
     },
     {
-      "path": "assets/index-DTg5k9uV.js",
-      "bytes": 312417,
-      "sha256": "1ba79e972506590dcd5923815a6b4bbe9259d86bddba8525c60241b9648a5306"
+      "path": "assets/index-BGL9ZC8q.js",
+      "bytes": 358847,
+      "sha256": "568bdd230f149e7fb855b2bc67124bd28be742ab439a7d1a666916d657b69550"
     },
     {
-      "path": "assets/index-DswLfkRV.css",
-      "bytes": 21263,
-      "sha256": "ba429a05bf0ed4bc55639faebf88164ea1819d5562345b101ff62397cfb63421"
+      "path": "assets/index-CBDlmFCN.css",
+      "bytes": 35694,
+      "sha256": "a87dc6c512a9cdf4450ca70969fc5cd3631d056cd42a0019c197b5aebecbc85a"
     },
     {
       "path": "drvcam-logo.png",
@@ -30,8 +30,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 664,
-      "sha256": "d294b88aa80cc4d3fc73dba9faa0b0c5a1688ebe3812d0bbee0071370d2d624a"
+      "bytes": 669,
+      "sha256": "1ea01b75a329f5b3bd9b441e04ba9e5ad7aa4159561786565ef4a6645049a371"
     },
     {
       "path": "robots.txt",
