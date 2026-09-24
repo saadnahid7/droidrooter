@@ -19,9 +19,9 @@
       "sha256": "a87dc6c512a9cdf4450ca70969fc5cd3631d056cd42a0019c197b5aebecbc85a"
     },
     {
-      "path": "assets/index-CSD1JiHo.js",
-      "bytes": 378725,
-      "sha256": "5e88985a8fc5dbed51e120d82e3c8785207719de6db7a94a76631576e7fcd5f4"
+      "path": "assets/index-CRlxpixK.js",
+      "bytes": 378711,
+      "sha256": "575fd00dfcf751eff0d502e6c06daef94d655cc37858d03b721e59ff72c1339d"
     },
     {
       "path": "drvcam-logo.png",
@@ -31,7 +31,7 @@
     {
       "path": "index.html",
       "bytes": 1181,
-      "sha256": "a676a70a8fab0edc6de3208df4315d7c4f16b637254581b19b975d3bd6b9a687"
+      "sha256": "633c6330e58e68eb91a1239368dcacd5f82e2042b34552a6d268307b9df64bb7"
     },
     {
       "path": "robots.txt",
