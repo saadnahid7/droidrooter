@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Idempotent dual-theme installation for the generated static site.
+"""Idempotent Command Center theme installation (dark/light) for the generated static site.
 
 Run after publishing new HTML. Re-running produces no diff: every addition is
 marker-delimited and removed before it is inserted again, and colour tokens are
 only applied to declarations that do not already use them.
 
-- Public pages get the head initializer, the theme stylesheets and one control
-  group (design + colour).
+- Public pages get the head initializer, the theme stylesheets and one
+  dark/light switch. Dark is the default.
 - Literal colours in site CSS, <style> blocks and style="" attributes become
   theme tokens that keep the original colour as a fallback, so any page without
   the theme stylesheets (see EXCLUDED) still renders exactly as before.
@@ -107,21 +107,19 @@ def colors(css):
 
 
 ICON_SUN = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M5 19l1.4-1.4M17.6 6.4L19 5"/></svg>'
-ICON_LAYOUT = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 9h18M9 9v11"/></svg>'
 
 
 def controls(floating):
     extra = ' dr-theme-controls--floating' if floating else ''
     return ('<!-- dr-theme-toggle:start -->'
-            f'<div class="dr-theme-controls{extra}" data-theme-controls hidden role="group" aria-label="Site theme">'
-            f'<button type="button" class="dr-theme-toggle dr-design-toggle" data-design-toggle aria-label="Design: Command Center. Switch to Terminal">{ICON_LAYOUT}<span data-design-label>Terminal</span></button>'
+            f'<div class="dr-theme-controls{extra}" data-theme-controls hidden>'
             f'<button type="button" class="dr-theme-toggle" data-theme-toggle aria-label="Switch to light theme" aria-pressed="true">{ICON_SUN}<span data-theme-label>Light</span></button>'
             '</div><!-- dr-theme-toggle:end -->')
 
 
 HEAD = '<!-- dr-theme-head:start --><script data-dr-theme-init src="/assets/theme/init.js"></script><!-- dr-theme-head:end -->'
 ASSETS = ('<!-- dr-theme-assets:start --><link rel="stylesheet" href="/assets/theme/base.css">'
-          '<link rel="stylesheet" href="/assets/theme/command.css"><link rel="stylesheet" href="/assets/theme/terminal.css">'
+          '<link rel="stylesheet" href="/assets/theme/command.css">'
           '<script src="/assets/theme/toggle.js" defer></script><!-- dr-theme-assets:end -->')
 
 CONSOLE_HEAD = '<!-- dr-theme-head:start --><script data-dr-theme-init src="/assets/theme/dashboard-bridge.js"></script><!-- dr-theme-head:end -->'

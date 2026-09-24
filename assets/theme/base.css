@@ -59,14 +59,14 @@ html[data-color-mode] .dr-port-grid{grid-template-columns:repeat(auto-fit,minmax
 html[data-color-mode] .dr-port-card{min-width:0;overflow-wrap:anywhere}
 /* Dashboard primary actions use contrasting ink in either palette. */
 html[data-color-mode] .btn.primary{background:var(--dr-accent);color:var(--dr-on-accent)}
-/* Theme control group: design + colour, placed in the nav or floating on pages without one. */
+/* Dark/light switch, placed in the nav or floating on pages without one. */
 html[data-color-mode] .dr-theme-controls{display:inline-flex;align-items:center;gap:8px;flex-shrink:0;order:3}
 html[data-color-mode] .dr-theme-controls[hidden]{display:none}
 html[data-color-mode] .dr-theme-controls .dr-theme-toggle{order:0}
 html[data-color-mode] .dr-theme-controls--floating{position:fixed;right:20px;bottom:20px;z-index:1000;padding:6px;border:1px solid var(--dr-line);border-radius:6px;background:var(--dr-bg);box-shadow:0 3px 18px #0003}
-@media(max-width:1100px) and (min-width:901px){html[data-color-mode] .dr-theme-controls{gap:6px}html[data-color-mode] .dr-theme-controls .dr-theme-toggle{padding-inline:9px}html[data-color-mode] .dr-design-toggle [data-design-label]{display:none}}
+@media(max-width:1100px) and (min-width:901px){html[data-color-mode] .dr-theme-controls{gap:6px}html[data-color-mode] .dr-theme-controls .dr-theme-toggle{padding-inline:9px}}
 @media(max-width:900px){html[data-color-mode] .dr-theme-controls{margin-left:auto}html[data-color-mode] .dr-theme-controls .dr-theme-toggle{margin-left:0}}
-@media(max-width:480px){html[data-color-mode] .dr-theme-controls{gap:6px}html[data-color-mode] .dr-theme-controls .dr-theme-toggle{min-width:0;padding:8px 10px}html[data-color-mode] .dr-theme-controls [data-design-label],html[data-color-mode] .dr-theme-controls [data-theme-label]{display:none}html[data-color-mode] .dr-theme-controls .dr-theme-toggle{min-width:42px}html[data-color-mode] .dr-theme-controls--floating{right:12px;bottom:12px}}
+@media(max-width:480px){html[data-color-mode] .dr-theme-controls{gap:6px}html[data-color-mode] .dr-theme-controls .dr-theme-toggle{min-width:0;padding:8px 10px}html[data-color-mode] .dr-theme-controls--floating{right:12px;bottom:12px}}
 /* Narrow phones: cards shrink with the viewport instead of widening the page. */
 html[data-color-mode] :is(.dr-sgrid-card,.dr-bcard,.dr-spc-card,.dr-tg-card){min-width:0}
 @media(max-width:480px){html[data-color-mode] .dr-sgrid-grid{grid-template-columns:minmax(0,1fr)}}

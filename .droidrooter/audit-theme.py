@@ -5,7 +5,7 @@ from html.parser import HTMLParser
 from urllib.parse import urljoin,urlsplit,unquote
 import subprocess,json,re,sys
 ROOT=Path(__file__).resolve().parents[1]
-BASE='fb7907c0ccad175eae98f6c58267a33d358b82cd'
+BASE=__import__('os').environ.get('AUDIT_BASE','94afa8007287c7688417405bc338f277e3b9ca22')
 # Pages the owner updates manually; they must stay byte-identical to the baseline.
 EXCLUDED={'blog/monitor-teen-android-without-them-knowing-legal-guide/index.html','blog/mspy-vs-bark-vs-qustodio-comparison/index.html','blog/parental-control-app-detection-and-removal/index.html'}
 def git(*a):return subprocess.check_output(['git',*a],cwd=ROOT).decode().replace('\r\n','\n')
@@ -46,7 +46,7 @@ for name in html:
  if (name in EXCLUDED or redirect) and old!=new:errors.append({'page':name,'error':'Excluded or redirect page modified'})
  elif name.startswith('drvcam/'):
   if new.count('data-dr-theme-init')!=1 or new.count('data-dashboard-theme-toggle')!=1 or '/assets/theme/base.css' in new:errors.append({'page':name,'error':'Console shell bridge missing, duplicated or loads public theme CSS'})
- elif not (name in EXCLUDED or redirect) and (new.count('data-dr-theme-init')!=1 or new.count('data-theme-controls')!=1 or new.count('data-design-toggle')!=1 or new.count('data-theme-toggle')!=1 or new.count('/assets/theme/command.css')!=1 or new.count('/assets/theme/terminal.css')!=1):errors.append({'page':name,'error':'Missing or duplicate theme controls'})
+ elif not (name in EXCLUDED or redirect) and (new.count('data-dr-theme-init')!=1 or new.count('data-theme-controls')!=1 or new.count('data-design-toggle')!=0 or new.count('data-theme-toggle')!=1 or new.count('/assets/theme/command.css')!=1 or new.count('/assets/theme/terminal.css')!=0):errors.append({'page':name,'error':'Missing or duplicate theme controls'})
  pages[name]=Page(new);oldpages[name]=Page(old)
  if re.search(r'http-equiv=["\']refresh',old,re.I):redirects.append(name)
  if pages[name].canonical!=oldpages[name].canonical or pages[name].meta!=oldpages[name].meta:errors.append({'page':name,'error':'SEO metadata changed'})

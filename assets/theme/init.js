@@ -1,10 +1,14 @@
-/* Apply saved design and color before first paint. First visits get Command Center, dark. */
+/* Apply the saved color mode before first paint. The site uses the Command Center
+   design in both modes; first visits get dark. */
 (() => {
   const root = document.documentElement;
-  const read = key => {
-    try { return localStorage.getItem(key); } catch (_) { return null; }
-  };
-  root.dataset.design = read('droidrooter-design') === 'terminal' ? 'terminal' : 'command';
-  root.dataset.colorMode = read('droidrooter-color-mode') === 'light' ? 'light' : 'dark';
-  root.style.colorScheme = root.dataset.colorMode;
+  let mode = 'dark';
+  try {
+    if (localStorage.getItem('droidrooter-color-mode') === 'light') mode = 'light';
+    // A design choice saved by an earlier release no longer applies.
+    localStorage.removeItem('droidrooter-design');
+  } catch (_) { /* Storage may be unavailable in private or embedded browsers. */ }
+  root.dataset.design = 'command';
+  root.dataset.colorMode = mode;
+  root.style.colorScheme = mode;
 })();

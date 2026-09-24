@@ -1,4 +1,4 @@
-# Dual theme production release
+# Command Center theme (dark / light) production release
 
 ## Refs
 
@@ -8,9 +8,9 @@
 
 ## What changed
 
-- Two designs, Command Center and Terminal, each in dark and light. First visits get Command Center, dark.
-- One control group in the navigation (or floating on pages without one): a design toggle and a dark/light toggle. Both preferences are stored per browser (`droidrooter-design`, `droidrooter-color-mode`) and applied before first paint.
-- Design stylesheets are selector-gated: `command.css` only matches `html[data-design=command]`, `terminal.css` only `html[data-design=terminal]`.
+- One design, Command Center, in dark and light. First visits get dark.
+- One dark/light switch in the navigation (or floating on pages without one). The choice is stored per browser (`droidrooter-color-mode`) and applied before first paint.
+- Revision: the first release also offered a Terminal design and a design toggle. That was not what was asked for; the Terminal stylesheet and design toggle are removed, and a saved `droidrooter-design` value from that release is cleared on the next visit.
 - Literal colours in site CSS, `<style>` blocks and `style=""` attributes were converted to theme tokens that keep the original colour as the fallback.
 - DRVCAM console shells load only the sign-in colour bridge. The console bundle, its CSS, `_headers` and manifest are unchanged; signed-in staff keep the console's own theme menu.
 - Narrow phones: service and blog cards now shrink with the viewport, which removes horizontal scrolling that 27 pages had at 320px on the baseline.
@@ -30,18 +30,18 @@ They share the tokenised blog stylesheet, whose fallbacks keep their original co
 | Check | Result |
 |---|---|
 | Route inventory | 179 HTML files: 144 themed public pages, 14 console shells, 18 redirects, 3 excluded |
-| Content and SEO (`audit-theme.py`) | 0 differences after removing marker-delimited additions: titles, meta, canonicals, structured data, headings, text and links |
+| Content and SEO (`audit-theme.py`, against current `main` and against pre-theme `fb7907c`) | 0 differences on public pages after removing marker-delimited additions: titles, meta, canonicals, structured data, headings, text and links |
 | Protected files | `sitemap.xml`, `robots.txt`, `manifest.json`, `drvcam/control/_headers`, console assets and manifest identical to baseline |
 | Internal links and anchors | 0 missing targets, 0 missing fragments |
-| Unit tests (`tests/theme.test.cjs`) | Defaults, saved, invalid and blocked storage, both toggles, gated variants |
-| Browser audit (`browser-audit.cjs`) | 161 pages, 1,214 rendered states (public pages: 2 designs x 2 colours x 1440/390 px); 0 overflow, covered controls, invisible text, script errors or missing assets on themed pages |
+| Unit tests (`tests/theme.test.cjs`) | Command Center only, dark default, saved, invalid and blocked storage, dark/light switch, gated stylesheet |
+| Browser audit (`browser-audit.cjs`) | 161 pages, 638 rendered states (dark and light at 1440 and 390 px); 0 overflow, covered controls, invisible text, script errors or missing assets on themed pages |
 | Redirects | 18/18 reach their targets |
 | Interactions | Mobile menu, keyboard toggles, preferences across navigation, FAQ, code copy, rootability checker, console contrast, blocked storage, JavaScript disabled |
 | 320 px sweep (all public pages vs baseline) | 0 new overflows; 27 baseline overflows fixed |
 | Idempotence | Re-running `apply-theme.py` produces no diff |
 
-Not run: Lighthouse (not available in the build environment). Added weight per themed page is three small stylesheets and two small scripts from the same origin.
+Not run: Lighthouse (not available in the build environment). Added weight per themed page is two small stylesheets and two small scripts from the same origin.
 
 ## Rollback
 
-`git revert` the integration merge on `main`, or reset `main` to `fb7907c0ccad175eae98f6c58267a33d358b82cd`. Do not reset to the backup branch: it predates the `fb7907c` console fix.
+Revert the theme commits on `main` (`git revert 1bc57b7 6a25a96`, newest first). Do not reset `main` to an older commit: Codex has published console fixes on top of the theme since, and a reset would remove them. The backup branch predates the `fb7907c` console fix as well.
