@@ -1,0 +1,733 @@
+{
+  "baseline": "fb7907c0ccad175eae98f6c58267a33d358b82cd",
+  "excluded_pages": [
+    "blog/monitor-teen-android-without-them-knowing-legal-guide/index.html",
+    "blog/mspy-vs-bark-vs-qustodio-comparison/index.html",
+    "blog/parental-control-app-detection-and-removal/index.html"
+  ],
+  "themed_public_pages": 144,
+  "html_pages": 179,
+  "redirect_pages": 18,
+  "application_shells": 14,
+  "preservation_errors": [],
+  "missing_local_targets": [],
+  "missing_fragments": [],
+  "routes": [
+    {
+      "file": "404.html",
+      "redirect": false
+    },
+    {
+      "file": "about/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/android-16-features-power-users/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/android-apps-keep-crashing/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/android-auto-keeps-disconnecting-after-update/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/android-battery-drain-fix/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/android-boot-loop-fix/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/android-bootloop-fix-without-losing-data/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/android-custom-kernel-guide-2025/index.html",
+      "redirect": true
+    },
+    {
+      "file": "blog/android-custom-kernel-guide-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/android-debloating-guide-2025/index.html",
+      "redirect": true
+    },
+    {
+      "file": "blog/android-debloating-guide-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/android-esim-transfer-failed/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/android-frp-bypass-guide-2025/index.html",
+      "redirect": true
+    },
+    {
+      "file": "blog/android-frp-bypass-guide-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/android-gaming-optimization-root/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/android-nfc-automation-recipes-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/android-notifications-delayed-until-unlock/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/android-overheating-fix/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/android-phone-slow-fix/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/android-phone-wont-turn-on/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/android-repair-guarantee/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/android-root-service-for-business/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/android-rooting-guide-2025/index.html",
+      "redirect": true
+    },
+    {
+      "file": "blog/android-rooting-guide-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/android-rooting-risks/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/android-sideloading-changes-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/android-virus-remove/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/android-wifi-keeps-disconnecting/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/android-wont-charge-fix/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/android-wont-turn-on-diagnosis/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/banking-apps-rooted-android-2026-western/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/best-android-phones-gaming-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/best-custom-roms-2025/index.html",
+      "redirect": true
+    },
+    {
+      "file": "blog/best-custom-roms-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/best-privacy-roms-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/bootloader-unlock-guide-2025/index.html",
+      "redirect": true
+    },
+    {
+      "file": "blog/bootloader-unlock-guide-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/bootloop-after-custom-rom/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/category/comparison/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/category/guide/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/category/how-to/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/category/news/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/category/review/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/category/tips/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/category/troubleshooting/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/edl-mode-explained/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/factory-reset-android-before-selling/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/failed-ota-update-rooted-phone/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/fastboot-device-not-detected/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/free-up-storage-android/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/frp-bypass-2026-what-works/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/frp-bypass-cost-comparison-uk-us-canada/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/game-booster-apps-android-tested/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/google-messages-rcs-error-3100-stuck-setting-up/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/google-pixel-root-guide-2025/index.html",
+      "redirect": true
+    },
+    {
+      "file": "blog/google-pixel-root-guide-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/how-to-set-up-google-family-link-android/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/huawei-google-services-restore-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/increase-fps-android-gaming/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/infinix-tecno-root-guide/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/is-android-spying-on-you/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/lineageos-vs-stock-android-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/lower-ping-android-gaming/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/macrodroid-vs-tasker-vs-automate-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/magisk-flash-failed-recovery/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/magisk-modules-guide-2025/index.html",
+      "redirect": true
+    },
+    {
+      "file": "blog/magisk-modules-guide-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/magisk-update-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/magisk-vs-kernelsu-vs-apatch/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/mi-account-bypass-guide/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/monitor-teen-android-without-them-knowing-legal-guide/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/motorola-moto-root-guide-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/mspy-vs-bark-vs-qustodio-comparison/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/odin-fail-errors-samsung/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/oneplus-12-13-root-guide/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/oneplus-nord-2-ce-3-root-guide-2025/index.html",
+      "redirect": true
+    },
+    {
+      "file": "blog/oneplus-nord-2-ce-3-root-guide-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/oneplus-nord-root-guide-2025/index.html",
+      "redirect": true
+    },
+    {
+      "file": "blog/oneplus-nord-root-guide-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/oneplus-root-guide-2025/index.html",
+      "redirect": true
+    },
+    {
+      "file": "blog/oneplus-root-guide-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/oppo-realme-frp-bypass-guide/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/parental-control-app-detection-and-removal/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/parental-monitoring-android-2026-complete-guide/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/phone-stuck-on-boot-screen/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/pixel-grapheneos-installation-guide-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/poco-x6-pro-root-guide/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/pokemon-go-spoofing-2025/index.html",
+      "redirect": true
+    },
+    {
+      "file": "blog/pokemon-go-spoofing-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/realme-gt6-root-guide/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/recover-android-data-broken-screen-no-usb-debugging/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/recover-data-from-bricked-phone/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/recover-deleted-photos-android/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/remote-access-android-safe/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/remote-android-repair-how-it-works/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/remote-android-repair-vs-local-shop/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/root-any-android-device-2025/index.html",
+      "redirect": true
+    },
+    {
+      "file": "blog/root-any-android-device-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/rootable-android-devices-complete-list-2025/index.html",
+      "redirect": true
+    },
+    {
+      "file": "blog/rootable-android-devices-complete-list-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/safetynet-play-integrity-root-guide/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/samsung-galaxy-a-series-root-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/samsung-galaxy-root-guide-2025/index.html",
+      "redirect": true
+    },
+    {
+      "file": "blog/samsung-galaxy-root-guide-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/samsung-knox-warranty-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/samsung-one-ui-vs-pixel-android/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/should-i-root-my-android/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/soft-brick-vs-hard-brick/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/stuck-in-recovery-mode-android/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/tasker-android-automation-guide-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/twrp-recovery-installation-guide-2025/index.html",
+      "redirect": true
+    },
+    {
+      "file": "blog/twrp-recovery-installation-guide-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/unlock-bootloader-android-guide/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/xiaomi-eu-rom-vs-global-vs-china/index.html",
+      "redirect": false
+    },
+    {
+      "file": "blog/xiaomi-redmi-root-guide-2025/index.html",
+      "redirect": true
+    },
+    {
+      "file": "blog/xiaomi-redmi-root-guide-2026/index.html",
+      "redirect": false
+    },
+    {
+      "file": "contact/index.html",
+      "redirect": false
+    },
+    {
+      "file": "devices/google-pixel/index.html",
+      "redirect": false
+    },
+    {
+      "file": "devices/index.html",
+      "redirect": false
+    },
+    {
+      "file": "devices/motorola/index.html",
+      "redirect": false
+    },
+    {
+      "file": "devices/oneplus/index.html",
+      "redirect": false
+    },
+    {
+      "file": "devices/realme-oppo/index.html",
+      "redirect": false
+    },
+    {
+      "file": "devices/samsung/index.html",
+      "redirect": false
+    },
+    {
+      "file": "devices/vivo-iqoo/index.html",
+      "redirect": false
+    },
+    {
+      "file": "devices/xiaomi/index.html",
+      "redirect": false
+    },
+    {
+      "file": "drvcam/control/app/index.html",
+      "redirect": false
+    },
+    {
+      "file": "drvcam/control/audit/index.html",
+      "redirect": false
+    },
+    {
+      "file": "drvcam/control/customers/index.html",
+      "redirect": false
+    },
+    {
+      "file": "drvcam/control/devices/index.html",
+      "redirect": false
+    },
+    {
+      "file": "drvcam/control/diagnostics/index.html",
+      "redirect": false
+    },
+    {
+      "file": "drvcam/control/index.html",
+      "redirect": false
+    },
+    {
+      "file": "drvcam/control/keys/index.html",
+      "redirect": false
+    },
+    {
+      "file": "drvcam/control/messaging/index.html",
+      "redirect": false
+    },
+    {
+      "file": "drvcam/control/operations/index.html",
+      "redirect": false
+    },
+    {
+      "file": "drvcam/control/plans/index.html",
+      "redirect": false
+    },
+    {
+      "file": "drvcam/control/risk/index.html",
+      "redirect": false
+    },
+    {
+      "file": "drvcam/control/sessions/index.html",
+      "redirect": false
+    },
+    {
+      "file": "drvcam/control/subscriptions/index.html",
+      "redirect": false
+    },
+    {
+      "file": "drvcam/control/team/index.html",
+      "redirect": false
+    },
+    {
+      "file": "faq/index.html",
+      "redirect": false
+    },
+    {
+      "file": "glossary/index.html",
+      "redirect": false
+    },
+    {
+      "file": "how-it-works/index.html",
+      "redirect": false
+    },
+    {
+      "file": "index.html",
+      "redirect": false
+    },
+    {
+      "file": "locations/canada/index.html",
+      "redirect": false
+    },
+    {
+      "file": "locations/germany/index.html",
+      "redirect": false
+    },
+    {
+      "file": "locations/index.html",
+      "redirect": false
+    },
+    {
+      "file": "locations/saudi-arabia/index.html",
+      "redirect": false
+    },
+    {
+      "file": "locations/uae/index.html",
+      "redirect": false
+    },
+    {
+      "file": "locations/united-kingdom/index.html",
+      "redirect": false
+    },
+    {
+      "file": "locations/usa/index.html",
+      "redirect": false
+    },
+    {
+      "file": "portfolio/index.html",
+      "redirect": false
+    },
+    {
+      "file": "pricing/index.html",
+      "redirect": false
+    },
+    {
+      "file": "privacy/index.html",
+      "redirect": false
+    },
+    {
+      "file": "saadnahid/index.html",
+      "redirect": false
+    },
+    {
+      "file": "services/account-recovery/index.html",
+      "redirect": false
+    },
+    {
+      "file": "services/advanced-mods/index.html",
+      "redirect": false
+    },
+    {
+      "file": "services/android-automation/index.html",
+      "redirect": false
+    },
+    {
+      "file": "services/android-rooting/index.html",
+      "redirect": false
+    },
+    {
+      "file": "services/bootloader-unlock/index.html",
+      "redirect": false
+    },
+    {
+      "file": "services/custom-rom-installation/index.html",
+      "redirect": false
+    },
+    {
+      "file": "services/data-recovery/index.html",
+      "redirect": false
+    },
+    {
+      "file": "services/firmware/index.html",
+      "redirect": false
+    },
+    {
+      "file": "services/frp-bypass/index.html",
+      "redirect": false
+    },
+    {
+      "file": "services/index.html",
+      "redirect": false
+    },
+    {
+      "file": "services/magisk-installation/index.html",
+      "redirect": false
+    },
+    {
+      "file": "services/parental-monitoring/index.html",
+      "redirect": false
+    },
+    {
+      "file": "services/performance-repair/index.html",
+      "redirect": false
+    },
+    {
+      "file": "services/privacy-hardening/index.html",
+      "redirect": false
+    },
+    {
+      "file": "services/senior-setup/index.html",
+      "redirect": false
+    },
+    {
+      "file": "team/alex-dutrow/index.html",
+      "redirect": false
+    },
+    {
+      "file": "team/imran-r/index.html",
+      "redirect": false
+    },
+    {
+      "file": "team/naz-n/index.html",
+      "redirect": false
+    },
+    {
+      "file": "team/ontor-zubair/index.html",
+      "redirect": false
+    },
+    {
+      "file": "team/saad-nahid/index.html",
+      "redirect": false
+    },
+    {
+      "file": "terms/index.html",
+      "redirect": false
+    },
+    {
+      "file": "tools/index.html",
+      "redirect": true
+    },
+    {
+      "file": "tools/rootability-checker/index.html",
+      "redirect": false
+    }
+  ]
+}
