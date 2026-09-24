@@ -44,4 +44,4 @@ Not run: Lighthouse (not available in the build environment). Added weight per t
 
 ## Rollback
 
-Revert the theme commits on `main` (`git revert 1bc57b7 6a25a96`, newest first). Do not reset `main` to an older commit: Codex has published console fixes on top of the theme since, and a reset would remove them. The backup branch predates the `fb7907c` console fix as well.
+Revert the theme commits on `main` (`git revert 6a8801f 6a25a96`, newest first). Do not reset `main` to an older commit: Codex has published console fixes on top of the theme since, and a reset would remove them. The backup branch predates the `fb7907c` console fix as well.
