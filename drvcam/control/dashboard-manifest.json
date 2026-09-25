@@ -14,14 +14,39 @@
       "sha256": "ee0dd5ef18661afc2fcc2315327ff058dc3b51f571fd1937bb14f6bdb43bf71c"
     },
     {
-      "path": "assets/index-C4Dx5sIq.js",
-      "bytes": 379811,
-      "sha256": "d281a731cc6a13741c3057c8fdd749a03c29a203bff3ac17ee98980b100fc1c1"
+      "path": "app/index.html",
+      "bytes": 669,
+      "sha256": "934012e494c957a4d1a85faf0f9b0a54d6548f64d453dcf02c8d7c3a9e866dd3"
     },
     {
-      "path": "assets/index-TcxJSxX0.css",
-      "bytes": 35776,
-      "sha256": "9e9f2c4a58d92fbbbc3e3f38637c7b5da9ba16f34798a95c92841b3aa3eef229"
+      "path": "assets/index-BrlZkaCu.css",
+      "bytes": 35843,
+      "sha256": "934a0774df2ab6c5d36300b2ca317fd9f254bd2c764d489ad9132895e4ef1b67"
+    },
+    {
+      "path": "assets/index-BuL66Fh3.js",
+      "bytes": 380334,
+      "sha256": "b6ff87134c8f4506ed6fe9eea20c59e14715bb18db02412e7f1bd39a4c7c40a1"
+    },
+    {
+      "path": "audit/index.html",
+      "bytes": 669,
+      "sha256": "934012e494c957a4d1a85faf0f9b0a54d6548f64d453dcf02c8d7c3a9e866dd3"
+    },
+    {
+      "path": "customers/index.html",
+      "bytes": 669,
+      "sha256": "934012e494c957a4d1a85faf0f9b0a54d6548f64d453dcf02c8d7c3a9e866dd3"
+    },
+    {
+      "path": "devices/index.html",
+      "bytes": 669,
+      "sha256": "934012e494c957a4d1a85faf0f9b0a54d6548f64d453dcf02c8d7c3a9e866dd3"
+    },
+    {
+      "path": "diagnostics/index.html",
+      "bytes": 669,
+      "sha256": "934012e494c957a4d1a85faf0f9b0a54d6548f64d453dcf02c8d7c3a9e866dd3"
     },
     {
       "path": "drvcam-logo.png",
@@ -30,13 +55,53 @@
     },
     {
       "path": "index.html",
-      "bytes": 1181,
-      "sha256": "c67d10be2a8a8c66d9097fd36044c3ff148e14a27a1bcc12b1a76a8ef49fcb3c"
+      "bytes": 669,
+      "sha256": "934012e494c957a4d1a85faf0f9b0a54d6548f64d453dcf02c8d7c3a9e866dd3"
+    },
+    {
+      "path": "keys/index.html",
+      "bytes": 669,
+      "sha256": "934012e494c957a4d1a85faf0f9b0a54d6548f64d453dcf02c8d7c3a9e866dd3"
+    },
+    {
+      "path": "messaging/index.html",
+      "bytes": 669,
+      "sha256": "934012e494c957a4d1a85faf0f9b0a54d6548f64d453dcf02c8d7c3a9e866dd3"
+    },
+    {
+      "path": "operations/index.html",
+      "bytes": 669,
+      "sha256": "934012e494c957a4d1a85faf0f9b0a54d6548f64d453dcf02c8d7c3a9e866dd3"
+    },
+    {
+      "path": "plans/index.html",
+      "bytes": 669,
+      "sha256": "934012e494c957a4d1a85faf0f9b0a54d6548f64d453dcf02c8d7c3a9e866dd3"
+    },
+    {
+      "path": "risk/index.html",
+      "bytes": 669,
+      "sha256": "934012e494c957a4d1a85faf0f9b0a54d6548f64d453dcf02c8d7c3a9e866dd3"
     },
     {
       "path": "robots.txt",
       "bytes": 26,
       "sha256": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1"
+    },
+    {
+      "path": "sessions/index.html",
+      "bytes": 669,
+      "sha256": "934012e494c957a4d1a85faf0f9b0a54d6548f64d453dcf02c8d7c3a9e866dd3"
+    },
+    {
+      "path": "subscriptions/index.html",
+      "bytes": 669,
+      "sha256": "934012e494c957a4d1a85faf0f9b0a54d6548f64d453dcf02c8d7c3a9e866dd3"
+    },
+    {
+      "path": "team/index.html",
+      "bytes": 669,
+      "sha256": "934012e494c957a4d1a85faf0f9b0a54d6548f64d453dcf02c8d7c3a9e866dd3"
     }
   ]
 }
